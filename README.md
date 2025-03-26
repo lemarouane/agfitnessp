@@ -2,7 +2,7 @@
 
   Fitlife is a fully responsive fitness website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
 
-  <a href="https://codewithsadee.github.io/fitlife/"><strong>➥ Live Demo</strong></a>
+  <a href="https://codewithsadee.github.io/agfitpp/"><strong>➥ Live Demo</strong></a>
 
 </div>
 
@@ -25,13 +25,13 @@ To run **Fitlife** locally, run this command on your git bash:
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/lemarouane/agfitnesspp.git
+sudo git clone https://github.com/lemarouane/agfitpp.git
 ```
 
 Windows:
 
 ```bash
-git clone https://github.com/lemarouane/agfitnesspp.git
+git clone https://github.com/lemarouane/agfitpp.git
 ```
 
  
