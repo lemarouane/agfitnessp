@@ -254,8 +254,10 @@ body {
 
 .btn-secondary:is(:hover, :focus) { background-color: var(--rich-black-fogra-29-1); }
 
-.w-100 { width: 100%;    margin-left: 4em;
-  margin-top: -5em; }
+.w-100 { width: 100%;    
+  margin-left: 4em;
+  margin-top: -5em; 
+}
 
 .circle,
 .abs-img { position: absolute; }
