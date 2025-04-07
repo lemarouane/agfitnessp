@@ -373,31 +373,119 @@
 
 
 
-      <!-- 
-        - #VIDEO ------------------ to be changed to Rolla App section 
-      -->
+<!-- 
+  #ROLLA PARTNERSHIP SECTION - FUTURISTIC VERSION
+-->
 
-      <section class="section video" aria-label="video">
-        <div class="container">
+<section class="section rolla-partnership" aria-label="rolla partnership">
+  <div class="container">
 
-          <div class="video-card has-before has-bg-image"
-            style="background-image: url('./assets/images/video-banner.jpg')">
+    <center><p class="section-subtitle">Our Partnership</p></center>
 
-            <h2 class="h2 card-title">Explore Fitness Life</h2>
+    <h2 class="h2 section-title text-center">Track Your Health with Rolla</h2>
 
-            <button class="play-btn" aria-label="play video">
-              <ion-icon name="play-sharp" aria-hidden="true"></ion-icon>
-            </button>
-
-            <a href="#" class="btn-link has-before">Watch More</a>
-
+    <div class="rolla-content">
+      <div class="rolla-text">
+        <p class="section-text">
+          We're proud to partner with <strong>Rolla</strong>, bringing cutting-edge health tracking technology to your fitness journey. 
+          Our clients now get real-time insights into their health metrics while training with AG Fitness coaches.
+        </p>
+        
+        <div class="rolla-benefits">
+          <div class="benefit-item">
+            <ion-icon name="pulse-outline"></ion-icon>
+            <span>Track heart rate & calories in real-time</span>
           </div>
-
+          <div class="benefit-item">
+            <ion-icon name="bed-outline"></ion-icon>
+            <span>Monitor sleep quality & recovery</span>
+          </div>
+          <div class="benefit-item">
+            <ion-icon name="trophy-outline"></ion-icon>
+            <span>Gamify your fitness journey</span>
+          </div>
+          <div class="benefit-item">
+            <ion-icon name="stats-chart-outline"></ion-icon>
+            <span>Detailed analytics for your coach</span>
+          </div>
         </div>
-      </section>
+        
+        <a href="#" class="btn btn-primary">Learn More About Rolla</a>
+      </div>
 
+      <div class="rolla-carousel">
+        <div class="carousel-inner">
+          <!-- Images will be added dynamically via JavaScript -->
+        </div>
+      </div>
+    </div>
 
+  </div>
+</section>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Rolla app screenshots (replace with your actual image paths)
+    const rollaScreenshots = [
+      './assets/images/Rolla/screen1.png',
+      './assets/images/Rolla/screen2.png',
+      './assets/images/Rolla/screen3.png',
+      './assets/images/Rolla/screen4.png',
+      './assets/images/Rolla/screen5.png'
+    ];
+    
+    const carouselInner = document.querySelector('.carousel-inner');
+    
+    // Create carousel items
+    rollaScreenshots.forEach((img, index) => {
+      const imgElement = document.createElement('img');
+      imgElement.src = img;
+      imgElement.alt = `Rolla app screenshot ${index + 1}`;
+      imgElement.className = 'carousel-img';
+      imgElement.setAttribute('data-index', index);
+      carouselInner.appendChild(imgElement);
+    });
+    
+    // Set up carousel functionality
+    const images = document.querySelectorAll('.carousel-img');
+    let currentIndex = 0;
+    const totalItems = images.length;
+    
+    // Initialize first image as visible
+    images[0].classList.add('active');
+    
+    // Animation presets
+    const animations = [
+      'futuristic-zoom',
+      'holographic-flip',
+      'neon-fade',
+      'particle-dissolve'
+    ];
+    
+    // Function to update carousel
+    function updateCarousel() {
+      // Get random animation
+      const animation = animations[Math.floor(Math.random() * animations.length)];
+      
+      // Remove active class from all images
+      images.forEach(img => {
+        img.classList.remove('active', ...animations);
+      });
+      
+      // Add active class with animation to current image
+      images[currentIndex].classList.add('active', animation);
+      
+      // Move to next image
+      currentIndex = (currentIndex + 1) % totalItems;
+    }
+    
+    // Auto-rotate every 4 seconds
+    setInterval(updateCarousel, 4000);
+    
+    // Initialize the carousel
+    updateCarousel();
+  });
+</script>
 
 
       <!-- 
