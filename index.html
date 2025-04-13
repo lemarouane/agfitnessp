@@ -198,47 +198,71 @@
         </div>
       </div>
 
-      <!-- Rolla Partnership Section -->
-      <section class="section transformations" aria-label="rolla partnership">
-        <div class="container">
-          <p class="section-subtitle">Our Partnership</p>
-          <h2 class="h2 section-title text-center">Track Your Health with Rolla</h2>
+<!-- Rolla Partnership Section -->
+<section class="section rolla-partnership" aria-label="rolla partnership">
+  <div class="container">
+    <div class="rolla-header">
+      <p class="section-subtitle">Our Partnership</p>
+      <h2 class="h2 section-title text-center">Track Your Health with Rolla</h2>
+    </div>
 
-          <div class="rolla-content">
-            <div class="rolla-text">
-              <p class="section-text">
-                We're proud to partner with <strong>Rolla</strong>, bringing cutting-edge health tracking technology to your fitness journey. 
-                Our clients now get real-time insights into their health metrics while training with AG Fitness coaches.
-              </p>
-              <div class="rolla-benefits">
-                <div class="benefit-item">
-                  <ion-icon name="pulse-outline"></ion-icon>
-                  <span>Track heart rate & calories in real-time</span>
-                </div>
-                <div class="benefit-item">
-                  <ion-icon name="bed-outline"></ion-icon>
-                  <span>Monitor sleep quality & recovery</span>
-                </div>
-                <div class="benefit-item">
-                  <ion-icon name="trophy-outline"></ion-icon>
-                  <span>Gamify your fitness journey</span>
-                </div>
-                <div class="benefit-item">
-                  <ion-icon name="stats-chart-outline"></ion-icon>
-                  <span>Detailed analytics for your coach</span>
-                </div>
-              </div>
-              <a href="#" class="btn btn-primary">Learn More About Rolla</a>
+    <div class="rolla-content">
+      <div class="rolla-text">
+        <div class="rolla-text-content">
+          <p class="rolla-intro">
+            We’ve teamed up with <span class="highlight">Rolla</span> to bring you the ultimate health tracking experience.
+          </p>
+          <p class="rolla-description">
+            Monitor your progress in real-time, gain insights, and stay motivated with cutting-edge technology while training with AG Fitness coaches.
+          </p>
+        </div>
+        <div class="rolla-benefits">
+          <div class="benefit-item" data-benefit="heart">
+            <div class="benefit-icon-wrapper">
+              <ion-icon name="pulse-outline"></ion-icon>
+              <div class="benefit-glow"></div>
             </div>
-
-            <div class="rolla-carousel">
-              <div class="carousel-inner">
-                <!-- Images will be added dynamically via JavaScript -->
-              </div>
+            <span>Track heart rate & calories in real-time</span>
+          </div>
+          <div class="benefit-item" data-benefit="sleep">
+            <div class="benefit-icon-wrapper">
+              <ion-icon name="bed-outline"></ion-icon>
+              <div class="benefit-glow"></div>
             </div>
+            <span>Monitor sleep quality & recovery</span>
+          </div>
+          <div class="benefit-item" data-benefit="trophy">
+            <div class="benefit-icon-wrapper">
+              <ion-icon name="trophy-outline"></ion-icon>
+              <div class="benefit-glow"></div>
+            </div>
+            <span>Gamify your fitness journey</span>
+          </div>
+          <div class="benefit-item" data-benefit="stats">
+            <div class="benefit-icon-wrapper">
+              <ion-icon name="stats-chart-outline"></ion-icon>
+              <div class="benefit-glow"></div>
+            </div>
+            <span>Detailed analytics for your coach</span>
           </div>
         </div>
-      </section>
+        <a href="#" class="btn btn-primary rolla-cta">
+          <span>Discover Rolla</span>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </a>
+      </div>
+
+      <div class="rolla-carousel-wrapper">
+        <div class="carousel-background"></div>
+        <div class="rolla-carousel">
+          <div class="carousel-inner">
+            <!-- Images will be added dynamically via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <!-- Trainers Section -->
       <section class="section trainers" id="team" aria-label="trainers"
@@ -662,6 +686,57 @@
       this.reset();
     });
   </script>
+  <!-- Rolla Carousel Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const rollaScreenshots = [
+      './assets/images/Rolla/screen1.png',
+      './assets/images/Rolla/screen2.png',
+      './assets/images/Rolla/screen3.png',
+      './assets/images/Rolla/screen4.png',
+      './assets/images/Rolla/screen5.png'
+    ];
+    
+    const carouselInner = document.querySelector('.carousel-inner');
+    
+    rollaScreenshots.forEach((img, index) => {
+      const imgElement = document.createElement('img');
+      imgElement.src = img;
+      imgElement.alt = `Rolla app screenshot ${index + 1}`;
+      imgElement.className = 'carousel-img';
+      imgElement.setAttribute('data-index', index);
+      carouselInner.appendChild(imgElement);
+    });
+    
+    const images = document.querySelectorAll('.carousel-img');
+    let currentIndex = 0;
+    const totalItems = images.length;
+    
+    images[0].classList.add('active');
+    
+    const animations = [
+      'futuristic-zoom',
+      'holographic-flip',
+      'neon-fade',
+      'particle-dissolve'
+    ];
+    
+    function updateCarousel() {
+      const animation = animations[Math.floor(Math.random() * animations.length)];
+      
+      images.forEach(img => {
+        img.classList.remove('active', ...animations);
+      });
+      
+      images[currentIndex].classList.add('active', animation);
+      
+      currentIndex = (currentIndex + 1) % totalItems;
+    }
+    
+    setInterval(updateCarousel, 4000);
+    updateCarousel();
+  });
+</script>
 
   <!-- Custom JS -->
   <script src="./assets/js/script.js" defer></script>
