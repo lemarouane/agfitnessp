@@ -2306,3 +2306,111 @@ body {
   .word-9 { font-size: 1.6rem; }
   .word-10 { font-size: 3.5rem; }
 }
+
+
+
+
+/* Transformations Grid */
+.transformations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increased min width */
+  gap: 30px; /* Increased gap for better spacing */
+  padding: 30px 0; /* Increased padding */
+}
+
+.transformation-item-test {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-10);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  min-height: 400px; /* Added minimum height for larger cards */
+}
+
+.img-transf-cover.transformation-img-test {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 400px; /* Ensure images scale with card height */
+}
+.transformation-item-test:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .transformations-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted for medium screens */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .transformations-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .transformation-item-test {
+    min-height: 350px; /* Slightly smaller for mobile */
+  }
+  .img-transf-cover.transformation-img {
+    min-height: 350px;
+  }
+}
+
+
+
+
+
+/* Trainers Grid */
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 30px 0;
+}
+
+.trainer-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-10);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 400px;
+}
+
+.trainer-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.img-trainer-cover.trainer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 400px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .trainers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trainers-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .trainer-card {
+    min-height: 350px;
+  }
+  .img-trainer-cover.trainer-img {
+    min-height: 350px;
+  }
+}

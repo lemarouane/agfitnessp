@@ -42,9 +42,9 @@
         </button>
 
         <ul class="navbar-list">
-          <li><a href="index.html" class="navbar-link active" data-nav-link>Home</a></li>
+          <li><a href="index.html" class="navbar-link " data-nav-link>Home</a></li>
           <li><a href="transformations.html" class="navbar-link" data-nav-link>Transformations</a></li>
-          <li><a href="team.html" class="navbar-link" data-nav-link>Our Team</a></li>
+          <li><a href="team.html" class="navbar-link active" data-nav-link>Our Team</a></li>
           <li><a href="#blog" class="navbar-link" data-nav-link>Blog</a></li>
         </ul>
       </nav>
@@ -109,182 +109,6 @@
       </div>
     </section>
 
-      <!-- Clients Transformations Section -->
-      <section class="section transformations" id="transformations" aria-label="transformations">
-        <div class="container">
-          <p class="section-subtitle">Our Clients</p>
-          <h2 class="h2 section-title text-center">Clients Transformations</h2>
-
-          <ul class="transformations-list has-scrollbar">
-            <li class="scrollbar-item">
-              <div class="transformation-item" onclick="openModal(
-                'Meet Sanjin', 
-                'Gain muscle', 
-                '+10kg', 
-                '16 weeks', 
-                'I was always a hard gainer, had my problems with gaining weight, especially muscle weight...', 
-                './assets/images/Transformations/sanjin-testi.mp4', 
-                true)">
-                <img src="./assets/images/Transformations/Sanjin.png" loading="lazy" alt="Transformation 1"
-                  class="img-transf-cover transformation-img">
-              </div>
-            </li>
-            <li class="scrollbar-item">
-              <div class="transformation-item" onclick="openModal(
-                'Meet Ammar', 
-                'Lose weight and build muscle', 
-                '-10Kg', 
-                '15 weeks', 
-                'I was stuck, I gained so much weight, I was always feeling low on energy and I had no motivation to do it on my own.', 
-                './assets/images/Transformations/ammar-testi.mp4', 
-                true)">
-                <img src="./assets/images/Transformations/Ammar.png" loading="lazy" alt="Transformation 2"
-                  class="img-transf-cover transformation-img">
-              </div>
-            </li>
-            <li class="scrollbar-item">
-              <div class="transformation-item" onclick="openModal(
-                'Meet Mahir', 
-                'Lose weight', 
-                '-8Kg', 
-                '16 weeks', 
-                'Mahir’s journey shows how small steps lead to big changes. He stayed focused, made healthier choices and kept showing up for himself every day. It wasn’t always easy but his hard work paid off. Now, he feels stronger, healthier and more confident than ever!', 
-                './assets/images/Transformations/5.png', 
-                false)">
-                <img src="./assets/images/Transformations/Mahir.png" loading="lazy" alt="Transformation 3"
-                  class="img-transf-cover transformation-img">
-              </div>
-            </li>
-            <li class="scrollbar-item">
-              <div class="transformation-item" onclick="openModal(
-                'Meet Deborah', 
-                'Lose weight', 
-                '-14Kg', 
-                '16 weeks', 
-                'If you are like me and you have put on a few extra pounds...', 
-                './assets/images/Transformations/deb-testi.mp4', 
-                true)">
-                <img src="./assets/images/Transformations/Deborah.png" loading="lazy" alt="Transformation 4"
-                  class="img-transf-cover transformation-img">
-              </div>
-            </li>
-            <li class="scrollbar-item">
-              <div class="transformation-item" onclick="openModal(
-                'Meet Omar', 
-                'Lose weight', 
-                '-12Kg', 
-                '12 weeks', 
-                'I was very lucky to end up with AG Fitness..', 
-                './assets/images/Transformations/omar-testi.mp4', 
-                true)">
-                <img src="./assets/images/Transformations/Omar.png" loading="lazy" alt="Transformation 5"
-                  class="img-transf-cover transformation-img">
-              </div>
-            </li>
-            <li class="scrollbar-item">
-              <div class="transformation-item" onclick="openModal(
-                'Meet Adin', 
-                'Lose weight and build muscle', 
-                '-12kg', 
-                '12 weeks', 
-                'I have been really drowsy before, lack of energy. I was not able to sleep so well and I was having mood swings.', 
-                './assets/images/Transformations/adin-testi.mp4', 
-                true)">
-                <img src="./assets/images/Transformations/Adin.png" loading="lazy" alt="Transformation 6"
-                  class="img-transf-cover transformation-img">
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Transformation Modal -->
-      <div id="transformationModal" class="modal">
-        <div class="modal-content">
-          <span class="close-btn" onclick="closeModal()">×</span>
-          <div class="modal-body">
-            <div class="modal-media">
-              <img id="modalImage" alt="Modal Image" style="display: none;">
-              <video id="modalVideo" style="display: none;"></video>
-            </div>
-            <div class="modal-text">
-              <h3 id="modalTitle"></h3>
-              <p><strong>Goal:</strong> <span id="modalGoal"></span></p>
-              <p><strong>Result:</strong> <span id="modalResult"></span></p>
-              <p><strong>Time:</strong> <span id="modalTime"></span></p>
-              <p><strong><span id="modalName"></span> says:</strong></p>
-              <blockquote id="modalQuote"></blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-
-<!-- Rolla Partnership Section -->
-<section class="section rolla-partnership" aria-label="rolla partnership">
-  <div class="container">
-    <div class="rolla-header">
-      <p class="section-subtitle">Our Partnership</p>
-      <h2 class="h2 section-title text-center">Track Your Health with Rolla</h2>
-    </div>
-
-    <div class="rolla-content">
-      <div class="rolla-text">
-        <div class="rolla-text-content">
-          <p class="rolla-intro">
-            We’ve teamed up with <span class="highlight">Rolla</span> to bring you the ultimate health tracking experience.
-          </p>
-          <p class="rolla-description">
-            Monitor your progress in real-time, gain insights, and stay motivated with cutting-edge technology while training with AG Fitness coaches.
-          </p>
-        </div>
-        <div class="rolla-benefits">
-          <div class="benefit-item" data-benefit="heart">
-            <div class="benefit-icon-wrapper">
-              <ion-icon name="pulse-outline"></ion-icon>
-              <div class="benefit-glow"></div>
-            </div>
-            <span>Track heart rate & calories in real-time</span>
-          </div>
-          <div class="benefit-item" data-benefit="sleep">
-            <div class="benefit-icon-wrapper">
-              <ion-icon name="bed-outline"></ion-icon>
-              <div class="benefit-glow"></div>
-            </div>
-            <span>Monitor sleep quality & recovery</span>
-          </div>
-          <div class="benefit-item" data-benefit="trophy">
-            <div class="benefit-icon-wrapper">
-              <ion-icon name="trophy-outline"></ion-icon>
-              <div class="benefit-glow"></div>
-            </div>
-            <span>Gamify your fitness journey</span>
-          </div>
-          <div class="benefit-item" data-benefit="stats">
-            <div class="benefit-icon-wrapper">
-              <ion-icon name="stats-chart-outline"></ion-icon>
-              <div class="benefit-glow"></div>
-            </div>
-            <span>Detailed analytics for your coach</span>
-          </div>
-        </div>
-        <a href="#" class="btn btn-primary rolla-cta">
-          <span>Discover Rolla</span>
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-        </a>
-      </div>
-
-      <div class="rolla-carousel-wrapper">
-        <div class="carousel-background"></div>
-        <div class="rolla-carousel">
-          <div class="carousel-inner">
-            <!-- Images will be added dynamically via JavaScript -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
       <!-- Trainers Section -->
       <section class="section trainers" id="team" aria-label="trainers"
         style="background-image: url('./assets/images/classes-bg.png')">
@@ -292,71 +116,28 @@
           <p class="section-subtitle">Our Trainers</p>
           <h2 class="h2 section-title text-center">Trainers</h2>
 
-          <ul class="trainers-list has-scrollbar">
-            <li class="scrollbar-item">
-              <img src="./assets/images/Trainers/1.png" loading="lazy" alt="Trainer 1" class="img-cover trainer-img">
-            </li>
-            <li class="scrollbar-item">
-              <img src="./assets/images/Trainers/2.png" loading="lazy" alt="Trainer 2" class="img-cover trainer-img">
-            </li>
-            <li class="scrollbar-item">
-              <img src="./assets/images/Trainers/3.png" loading="lazy" alt="Trainer 3" class="img-cover trainer-img">
-            </li>
-            <li class="scrollbar-item">
-              <img src="./assets/images/Trainers/4.png" loading="lazy" alt="Trainer 4" class="img-cover trainer-img">
-            </li>
-            <li class="scrollbar-item">
-              <img src="./assets/images/Trainers/5.png" loading="lazy" alt="Trainer 5" class="img-cover trainer-img">
-            </li>
-            <li class="scrollbar-item">
-              <img src="./assets/images/Trainers/6.png" loading="lazy" alt="Trainer 6" class="img-cover trainer-img">
-            </li>
-          </ul>
+          <div class="trainers-grid">
+            <div class="trainer-card">
+              <img src="./assets/images/Trainers/1.png" loading="lazy" alt="Trainer 1" class="img-trainer-cover trainer-img">
+            </div>
+            <div class="trainer-card">
+              <img src="./assets/images/Trainers/2.png" loading="lazy" alt="Trainer 2" class="img-trainer-cover trainer-img">
+            </div>
+            <div class="trainer-card">
+              <img src="./assets/images/Trainers/3.png" loading="lazy" alt="Trainer 3" class="img-trainer-cover trainer-img">
+            </div>
+            <div class="trainer-card">
+              <img src="./assets/images/Trainers/4.png" loading="lazy" alt="Trainer 4" class="img-trainer-cover trainer-img">
+            </div>
+            <div class="trainer-card">
+              <img src="./assets/images/Trainers/5.png" loading="lazy" alt="Trainer 5" class="img-trainer-cover trainer-img">
+            </div>
+            <div class="trainer-card">
+              <img src="./assets/images/Trainers/6.png" loading="lazy" alt="Trainer 6" class="img-trainer-cover trainer-img">
+            </div>
+          </div>
         </div>
       </section>
-
-<!-- Redefine Progress Section -->
-<section class="section redefine-progress" aria-label="redefine progress">
-  <div class="progress-container">
-    <p class="section-subtitle">Our Philosophy</p>
-    <h2 class="h2 section-title text-center">Let’s Redefine Progress</h2>
-    <div class="progress-content">
-      <p class="progress-intro">
-        Progress is often seen as something that only counts at the <em>finish line</em> — when you've hit a <em>goal weight</em>, 
-        carved out abs or caught up to people who've been training for years.
-      </p>
-      <p class="progress-intro">
-        But with us, progress starts the moment you <em>choose to show up</em> — and it comes in <em>many forms</em>, not just physical ones.
-      </p>
-      <div class="word-cloud">
-        <div class="word-cloud-row">
-          <span class="word word-1">Getting out of bed</span>
-          <span class="word-separator">|</span>
-          <span class="word word-2">More Energy</span>
-          <span class="word-separator">|</span>
-          <span class="word word-3">Sleeping through</span>
-        </div>
-        <div class="word-cloud-row">
-          <span class="word word-4">Feeling Stronger</span>
-          <span class="word-separator">|</span>
-          <span class="word word-5">Saying No</span>
-          <span class="word-separator">|</span>
-          <span class="word word-6">Trusting your body</span>
-        </div>
-        <div class="word-cloud-row">
-          <span class="word word-7">Showing up</span>
-          <span class="word-separator">|</span>
-          <span class="word word-8">Eating without shame</span>
-          <span class="word-separator">|</span>
-          <span class="word word-9">Feeling your core</span>
-        </div>
-        <div class="word-cloud-row">
-          <span class="word word-10">I feel good</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
       <!-- Contact Section -->
       <section class="section contact" id="contact" aria-label="contact">
@@ -663,29 +444,6 @@
     });
   </script>
 
-  <!-- Trainers Carousel Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const carousel = document.querySelector('.trainers-list');
-      let scrollAmount = 0;
-      const scrollStep = carousel.querySelector('.scrollbar-item').offsetWidth;
-      const intervalTime = 3000;
-
-      function slide() {
-        scrollAmount += scrollStep;
-        if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
-          scrollAmount = 0;
-        }
-        carousel.scrollTo({
-          left: scrollAmount,
-          behavior: 'smooth'
-        });
-      }
-
-      setInterval(slide, intervalTime);
-    });
-  </script>
-
   <!-- Contact Form Script -->
   <script>
     document.getElementById("contactForm").addEventListener("submit", function(event) {
@@ -720,57 +478,6 @@
       this.reset();
     });
   </script>
-  <!-- Rolla Carousel Script -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const rollaScreenshots = [
-      './assets/images/Rolla/screen1.png',
-      './assets/images/Rolla/screen2.png',
-      './assets/images/Rolla/screen3.png',
-      './assets/images/Rolla/screen4.png',
-      './assets/images/Rolla/screen5.png'
-    ];
-    
-    const carouselInner = document.querySelector('.carousel-inner');
-    
-    rollaScreenshots.forEach((img, index) => {
-      const imgElement = document.createElement('img');
-      imgElement.src = img;
-      imgElement.alt = `Rolla app screenshot ${index + 1}`;
-      imgElement.className = 'carousel-img';
-      imgElement.setAttribute('data-index', index);
-      carouselInner.appendChild(imgElement);
-    });
-    
-    const images = document.querySelectorAll('.carousel-img');
-    let currentIndex = 0;
-    const totalItems = images.length;
-    
-    images[0].classList.add('active');
-    
-    const animations = [
-      'futuristic-zoom',
-      'holographic-flip',
-      'neon-fade',
-      'particle-dissolve'
-    ];
-    
-    function updateCarousel() {
-      const animation = animations[Math.floor(Math.random() * animations.length)];
-      
-      images.forEach(img => {
-        img.classList.remove('active', ...animations);
-      });
-      
-      images[currentIndex].classList.add('active', animation);
-      
-      currentIndex = (currentIndex + 1) % totalItems;
-    }
-    
-    setInterval(updateCarousel, 4000);
-    updateCarousel();
-  });
-</script>
 
   <!-- Custom JS -->
   <script src="./assets/js/script.js" defer></script>
