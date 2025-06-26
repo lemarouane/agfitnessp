@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AG Fitness Dubai | Personal Training, Fitness Transformations & Wellness Programs</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/Logo/logo2.svg" type="image/svg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap" rel="stylesheet">
+
+  <!-- Preload Images -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
+  <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
+  <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
+  <link rel="preload" as="image" href="./assets/images/calories.svg">
+
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@0.12.0/dist/js-confetti.browser.js"></script>
+
+  <!-- Success Message CSS -->
+  <style>
+    .success-message {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #28a745;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      opacity: 0;
+      transform: translateX(-50%) translateY(20px);
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .success-message.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .success-message .check-icon {
+      font-size: 1.3rem;
+    }
+
+    .celebration-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #000;
+      opacity: 0.8;
+      animation: fall 4s linear infinite;
+    }
+
+    .emoji-particle {
+      position: absolute;
+      font-size: 24px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .fitness-particle {
+      position: absolute;
+      font-size: 20px;
+      animation: burst 2.5s ease-out infinite;
+    }
+
+    .firework {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      animation: firework 1s ease-out forwards;
+    }
+
+    .success-pulse {
+      animation: pulse 0.6s ease-in-out;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-100vh) rotate(0deg); opacity: 0.8; }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      50% { transform: translateY(-20px) scale(1.2); opacity: 0.7; }
+      100% { transform: translateY(0) scale(1); opacity: 1; }
+    }
+
+    @keyframes burst {
+      0% { transform: scale(0); opacity: 1; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+
+    @keyframes firework {
+      0% { transform: translate(0, 0); opacity: 1; }
+      100% { transform: translate(var(--dx), var(--dy)); opacity: 0; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body id="top">
+  <div class="celebration-container" id="celebrationContainer"></div>
+
+  <!-- Header -->
+  <header class="header" data-header>
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="./assets/Logo/lightLogo.svg" alt="AG Physique & Performance Light Logo" class="light-logo">
+        <img src="./assets/Logo/Logo.svg" alt="AG Physique & Performance Logo" class="dark-logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+        </button>
+
+        <ul class="navbar-list">
+          <li><a href="index.html" class="navbar-link" data-nav-link>Home</a></li>
+          <li><a href="transformations.html" class="navbar-link" data-nav-link>Transformations</a></li>
+          <li><a href="team.html" class="navbar-link" data-nav-link>Our Team</a></li>
+          <li><a href="blog.html" class="navbar-link" data-nav-link>Blog</a></li>
+        </ul>
+      </nav>
+
+      <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <article>
+      <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero"
+        style="background-image: url('./assets/images/hero-bg.png')">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="h1 hero-title">Own Your Fitness Journey</h1>
+            <p class="section-text">
+              Team up with AG Fitness coaches and the Rolla app to track calories, steps, heart rate, and more in real-time, with personalized plans to crush your goals.
+            </p>
+            <a href="contact.html" class="btn btn-primary">Book Your Free Consultation</a>
+          </div>
+
+          <div class="hero-banner">
+            <img src="./assets/images/93.png" width="660" height="753" alt="Coach with Rolla smart band" class="w-100">
+            <img src="./assets/images/hero-circle-one.png" width="666" height="666" aria-hidden="true" alt=""
+              class="circle circle-1">
+            <img src="./assets/images/hero-circle-two.png" width="666" height="666" aria-hidden="true" alt=""
+              class="circle circle-2">
+            <!-- Top Metric Elements Emerging from Rolla Band -->
+            <div class="metric metric-top-kcal">
+              <ion-icon name="flame-outline"></ion-icon>
+              <span>500 kcal</span>
+            </div>
+            <div class="metric metric-top-steps">
+              <ion-icon name="footsteps-outline"></ion-icon>
+              <span>10,000</span>
+            </div>
+            <div class="metric metric-top-bpm">
+              <ion-icon name="pulse-outline"></ion-icon>
+              <span>80 bpm</span>
+            </div>
+            <!-- Bottom Metric Elements Emerging from Rolla Band -->
+            <div class="metric metric-bottom-minutes">
+              <ion-icon name="time-outline"></ion-icon>
+              <span>45 min</span>
+            </div>
+            <div class="metric metric-bottom-distance">
+              <ion-icon name="trail-sign-outline"></ion-icon>
+              <span>5 km</span>
+            </div>
+            <div class="metric metric-bottom-sleep">
+              <ion-icon name="bed-outline"></ion-icon>
+              <span>7 hrs</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section contact" id="contact" aria-label="contact">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <p class="section-subtitle">Contact Us</p>
+              <h2 class="h2 section-title">Get In Touch</h2>
+              <ul class="contact-list">
+                <li class="contact-item">
+                  <div class="icon">
+                    <ion-icon name="location" aria-hidden="true"></ion-icon>
+                  </div>
+                  <p class="contact-text">
+                    <a href="https://www.google.com/maps/search/?api=1&query=AG+Fitness+Dubai" target="_blank">
+                      AG Fitness - Personal Trainers Dubai serves clients across the entire Dubai area
+                    </a>
+                  </p>
+                </li>
+                <li class="contact-item">
+                  <div class="icon">
+                    <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
+                  </div>
+                  <p class="contact-text">
+                    <a href="https://wa.me/971585736600" target="_blank">+971 58 573 6600</a>
+                  </p>
+                </li>
+                <li class="contact-item">
+                  <div class="icon">
+                    <ion-icon name="mail" aria-hidden="true"></ion-icon>
+                  </div>
+                  <p class="contact-text">
+                    <a href="mailto:info@agfitnessdxb.com">info@agfitnessdxb.com</a>
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact-form">
+              <form id="contactForm" class="form-wrapper">
+                <input type="text" name="fullName" placeholder="Full Name" required class="input-field">
+                <input type="email" name="email" placeholder="Email" required class="input-field">
+                <input type="tel" name="phoneNumber" placeholder="Phone Number" required class="input-field">
+                <input type="text" name="comment" placeholder="Your Goal!" required class="input-field">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+              <div id="successMessage" class="success-message">
+                <span class="check-icon">✔️</span>
+                <p>Thank you for contacting us!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d553786.7814324835!2d55.0072465!3d25.014285!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6da00f56f12f%3A0xba8d543988b024e2!2sAG%20Fitness%20-%20Personal%20Trainers%20Dubai!5e1!3m2!1sen!2sma!4v1731327107495!5m2!1sen!2sma"
+              height="550" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section footer-top bg-dark has-bg-image" style="background-image: url('./assets/images/footer-bg.png')">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="./assets/Logo/lightLogo.svg" alt="AG Physique & Performance Light Logo" class="light-logo">
+          </a>
+          <p class="footer-brand-text">
+            Welcome to our platform, your go-to source for fitness, health, and personal well-being tips. Join us as we inspire healthier lifestyles!
+          </p>
+          <ul class="social-list">
+            <li><a href="https://www.facebook.com/AGFitnessdxb" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://www.tiktok.com/@agfitnessdxb?lang=en" class="social-link"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+            <li><a href="https://www.linkedin.com/company/agfitnessdxb" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/ag_fitness_dxb/" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="mailto:info@agfitnessdxb.com" class="social-link"><ion-icon name="mail"></ion-icon></a></li>
+          </ul>
+        </div>
+
+        <ul class="footer-list">
+          <li><p class="footer-list-title has-before">Useful Links</p></li>
+          <li><a href="./index.html" class="footer-link">Home</a></li>
+          <li><a href="./about-us.html" class="footer-link">About Us</a></li>
+          <li><a href="./team.html" class="footer-link">Our Team</a></li>
+          <li><a href="./Transformations.html" class="footer-link">Transformations</a></li>
+          <li><a href="./blog.html" class="footer-link">Blog</a></li>
+          <li><a href="./contact.html" class="footer-link">Contact</a></li>
+        </ul>
+
+        <ul class="footer-list">
+          <li><p class="footer-list-title has-before">Contact Us</p></li>
+          <li class="footer-list-item">
+            <div class="icon"><ion-icon name="location" aria-hidden="true"></ion-icon></div>
+            <address class="address footer-link">
+              <a href="https://www.google.com/maps/search/?api=1&query=AG+Fitness+Dubai" target="_blank">
+                AG Fitness - Personal Trainers Dubai serves clients across the entire Dubai area
+              </a>
+            </address>
+          </li>
+          <li class="footer-list-item">
+            <div class="icon"><ion-icon name="call" aria-hidden="true"></ion-icon></div>
+            <div><a href="https://wa.me/971585736600" target="_blank" class="footer-link">+971 58 573 6600</a></div>
+          </li>
+          <li class="footer-list-item">
+            <div class="icon"><ion-icon name="mail" aria-hidden="true"></ion-icon></div>
+            <div><a href="mailto:info@agfitnessdxb.com" class="footer-link">info@agfitnessdxb.com</a></div>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li><p class="footer-list-title has-before">Tips & Guides</p></li>
+          <li>
+            <div class="footer-blog-item">
+              <h6><a href="./blog-details-1.html" class="footer-link">Your Path to Muscle Growth Begins Here!</a></h6>
+              <ul class="footer-blog-meta">
+                <li>3 min read</li>
+                <li>15 Comment</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="footer-blog-item">
+              <h6><a href="./blog-details-2.html" class="footer-link">The Power of Core Strength for a Stronger You</a></h6>
+              <ul class="footer-blog-meta">
+                <li>5 min read</li>
+                <li>10 Comment</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="footer-blog-item">
+              <h6><a href="./blog-details-5.html" class="footer-link">The Benefits of Strength Training</a></h6>
+              <ul class="footer-blog-meta">
+                <li>8 min read</li>
+                <li>12 Comment</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          © <script>document.write(new Date().getFullYear());</script> AG Fitness. All Rights Reserved By 
+          <a href="https://github.com/lemarouane" target="_blank" class="copyright-link">AG Fitness</a>
+        </p>
+        <ul class="footer-bottom-list">
+          <li><a href="#" class="footer-bottom-link has-before">Privacy Policy</a></li>
+          <li><a href="#" class="footer-bottom-link has-before">Terms & Condition</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- Scripts -->
+  <!-- Transformation Modal Script -->
+  <script>
+    function openModal(title, goal, result, time, quote, mediaSrc, isVideo) {
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalGoal').textContent = goal;
+      document.getElementById('modalResult').textContent = result;
+      document.getElementById('modalTime').textContent = time;
+      document.getElementById('modalQuote').textContent = quote;
+      document.getElementById('modalName').textContent = title.split(' ')[1];
+
+      const modal = document.getElementById('transformationModal');
+      const modalImage = document.getElementById('modalImage');
+      const modalVideo = document.getElementById('modalVideo');
+
+      if (isVideo) {
+        modalImage.style.display = 'none';
+        modalVideo.style.display = 'blockobservador: block';
+        modalVideo.src = mediaSrc;
+
+        modalVideo.addEventListener('loadedmetadata', () => {
+          const aspectRatio = modalVideo.videoWidth / modalVideo.videoHeight;
+          if (aspectRatio > 1) {
+            modalVideo.style.width = '100%';
+            modalVideo.style.height = 'auto';
+          } else {
+            modalVideo.style.width = 'auto';
+            modalVideo.style.height = '100%';
+          }
+        }, { once: true });
+
+        modalVideo.play();
+      } else {
+        modalVideo.style.display = 'none';
+        modalImage.style.display = 'block';
+        modalImage.src = mediaSrc;
+      }
+
+      modal.style.display = 'block';
+      requestAnimationFrame(() => {
+        modal.classList.add('open');
+      });
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('transformationModal');
+      modal.classList.remove('open');
+      
+      const modalVideo = document.getElementById('modalVideo');
+      if (modalVideo) {
+        modalVideo.pause();
+        modalVideo.src = '';
+      }
+
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 300);
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('transformationModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
+
+  <!-- Transformations Carousel Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const carousel = document.querySelector('.transformations-list');
+      if (carousel) {
+        let scrollAmount = 0;
+        const scrollStep = carousel.querySelector('.scrollbar-item')?.offsetWidth || 300;
+        const intervalTime = 3000;
+
+        function slide() {
+          scrollAmount += scrollStep;
+          if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+            scrollAmount = 0;
+          }
+          carousel.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+          });
+        }
+
+        setInterval(slide, intervalTime);
+      }
+    });
+  </script>
+
+  <!-- Rolla Carousel Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const rollaScreenshots = [
+        './assets/images/Rolla/screen1.png',
+        './assets/images/Rolla/screen2.png',
+        './assets/images/Rolla/screen3.png',
+        './assets/images/Rolla/screen4.png',
+        './assets/images/Rolla/screen5.png'
+      ];
+      
+      const carouselInner = document.querySelector('.carousel-inner');
+      if (carouselInner) {
+        rollaScreenshots.forEach((img, index) => {
+          const imgElement = document.createElement('img');
+          imgElement.src = img;
+          imgElement.alt = `Rolla app screenshot ${index + 1}`;
+          imgElement.className = 'carousel-img';
+          imgElement.setAttribute('data-index', index);
+          carouselInner.appendChild(imgElement);
+        });
+        
+        const images = document.querySelectorAll('.carousel-img');
+        let currentIndex = 0;
+        const totalItems = images.length;
+        
+        images[0].classList.add('active');
+        
+        const animations = [
+          'futuristic-zoom',
+          'holographic-flip',
+          'neon-fade',
+          'particle-dissolve'
+        ];
+        
+        function updateCarousel() {
+          const animation = animations[Math.floor(Math.random() * animations.length)];
+          
+          images.forEach(img => {
+            img.classList.remove('active', ...animations);
+          });
+          
+          images[currentIndex].classList.add('active', animation);
+          
+          currentIndex = (currentIndex + 1) % totalItems;
+        }
+        
+        setInterval(updateCarousel, 4000);
+        updateCarousel();
+      }
+    });
+  </script>
+
+  <!-- Trainers Carousel Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const carousel = document.querySelector('.trainers-list');
+      if (carousel) {
+        let scrollAmount = 0;
+        const scrollStep = carousel.querySelector('.scrollbar-item')?.offsetWidth || 300;
+        const intervalTime = 3000;
+
+        function slide() {
+          scrollAmount += scrollStep;
+          if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+            scrollAmount = 0;
+          }
+          carousel.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+          });
+        }
+
+        setInterval(slide, intervalTime);
+      }
+    });
+  </script>
+
+  <!-- Celebration Animation Functions -->
+  <script>
+    function createConfetti() {
+      const container = document.getElementById('celebrationContainer');
+      const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3', '#54a0ff', '#5f27cd'];
+      
+      for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDelay = Math.random() * 2 + 's';
+        confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+        container.appendChild(confetti);
+        
+        setTimeout(() => {
+          confetti.remove();
+        }, 4000);
+      }
+    }
+
+    function createEmojiParticles() {
+      const container = document.getElementById('celebrationContainer');
+      const emojis = ['🎉', '🎊', '💪', '🏋️', '🎯', '⚡', '🔥', '✨', '🎈', '🥳'];
+      
+      for (let i = 0; i < 20; i++) {
+        const emoji = document.createElement('div');
+        emoji.className = 'emoji-particle';
+        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        emoji.style.left = Math.random() * 100 + '%';
+        emoji.style.animationDelay = Math.random() * 1 + 's';
+        container.appendChild(emoji);
+        
+        setTimeout(() => {
+          emoji.remove();
+        }, 4000);
+      }
+    }
+
+    function createFitnessParticles() {
+      const container = document.getElementById('celebrationContainer');
+      const fitnessIcons = ['💪', '🏋️‍♂️', '🏋️‍♀️', '🏃‍♂️', '🏃‍♀️', '🥇', '🏆', '💯', '🔥', '⚡'];
+      
+      for (let i = 0; i < 15; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'fitness-particle';
+        particle.textContent = fitnessIcons[Math.floor(Math.random() * fitnessIcons.length)];
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 1.5 + 's';
+        container.appendChild(particle);
+        
+        setTimeout(() => {
+          particle.remove();
+        }, 3000);
+      }
+    }
+
+    function createFirework(x, y) {
+      const container = document.getElementById('celebrationContainer');
+      const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57'];
+      
+      for (let i = 0; i < 12; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'firework';
+        particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        particle.style.left = x + 'px';
+        particle.style.top = y + 'px';
+        
+        const angle = (i * 30) * Math.PI / 180;
+        const distance = 100 + Math.random() * 50;
+        const dx = Math.cos(angle) * distance;
+        const dy = Math.sin(angle) * distance;
+        
+        particle.style.setProperty('--dx', dx + 'px');
+        particle.style.setProperty('--dy', dy + 'px');
+        particle.style.animationDelay = Math.random() * 0.2 + 's';
+        
+        container.appendChild(particle);
+        
+        setTimeout(() => {
+          particle.remove();
+        }, 1500);
+      }
+    }
+
+    function triggerCelebration() {
+      const successMessage = document.getElementById('successMessage');
+      successMessage.classList.add('success-pulse');
+      
+      createConfetti();
+      createEmojiParticles();
+      createFitnessParticles();
+      
+      setTimeout(() => {
+        for (let i = 0; i < 3; i++) {
+          setTimeout(() => {
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight * 0.7;
+            createFirework(x, y);
+          }, i * 500);
+        }
+      }, 500);
+      
+      setTimeout(() => {
+        successMessage.classList.remove('success-pulse');
+      }, 600);
+    }
+  </script>
+
+  <!-- Contact Form Script -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const jsConfetti = new JSConfetti();
+      const successMessage = document.getElementById("successMessage");
+      successMessage.style.display = "flex";
+      successMessage.classList.add("show");
+
+      // Trigger both celebration animations
+      triggerCelebration();
+      jsConfetti.addConfetti({
+        emojis: ["🎉", "💪", "🏋️"],
+        confettiNumber: 50,
+        confettiRadius: 4,
+        confettiSpeed: 15,
+        confettiColors: ["#ff0a54", "#ff477e", "#ff85a1", "#28a745"]
+      });
+
+      setTimeout(() => {
+        successMessage.classList.remove("show");
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 300);
+      }, 2500);
+
+      const formData = new FormData(this);
+      const data = new URLSearchParams(formData);
+
+      fetch("https://script.google.com/macros/s/AKfycbxkCMAaYi2JcgdfNzLOaSGeh0AHXY2jOxZpJwIFMgIDe6MtNuRQ66_4cS_3DchbwQ29/exec", {
+        method: "POST",
+        body: data,
+      })
+        .then(response => response.text())
+        .then(result => {
+          console.log("Form submission result:", result);
+          if (result !== "Success") {
+            alert("Submission failed: " + result);
+          }
+        })
+        .catch(error => {
+          console.error("Error submitting form:", error.message);
+          alert("Error submitting form: " + error.message);
+        });
+
+      this.reset();
+    });
+  </script>
+
+  <!-- Custom JS -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
