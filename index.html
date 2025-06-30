@@ -149,7 +149,7 @@
                 '-8Kg', 
                 '16 weeks', 
                 'Mahir’s journey shows how small steps lead to big changes. He stayed focused, made healthier choices and kept showing up for himself every day. It wasn’t always easy but his hard work paid off. Now, he feels stronger, healthier and more confident than ever!', 
-                './assets/images/Transformations/5.png', 
+                './assets/images/Transformations/Mahir.png', 
                 false)">
                 <img src="./assets/images/Transformations/Mahir.png" loading="lazy" alt="Transformation 3"
                   class="img-transf-cover transformation-img">
@@ -219,71 +219,540 @@
         </div>
       </div>
 
-<!-- Rolla Partnership Section -->
-<section class="section rolla-partnership" aria-label="rolla partnership">
-  <div class="container">
-    <div class="rolla-header">
-      <p class="section-subtitle">Our Partnership</p>
-      <h2 class="h2 section-title text-center">Track Your Health with Rolla</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Root Variables */
+    :root {
+      --coquelicot: #ff5100;
+      --coquelicot_10: rgba(255, 81, 0, 0.1);
+      --rich-black-fogra-29-1: #0a0a0a;
+      --sonic-silver: #757575;
+      --white: #ffffff;
+      --section-spacing: 60px;
+      --radius-8: 8px;
+    }
+
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Rolla Partnership Section Styles */
+    .rolla-partnership {
+      position: relative;
+      background-color: var(--white);
+      padding-block: var(--section-spacing);
+      overflow: hidden;
+    }
+
+    .rolla-header {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .rolla-header .section-subtitle {
+      background-color: var(--coquelicot_10);
+      color: var(--coquelicot);
+      padding: 8px 20px;
+      border-radius: var(--radius-8);
+      display: inline-block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .rolla-header .section-title {
+      color: var(--rich-black-fogra-29-1);
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .full-width-carousel-section {
+      position: relative;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      height: 80vh;
+      min-height: 600px;
+      overflow: hidden;
+      border-radius: 0;
+    }
+
+    .carousel-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+    }
+
+    .slide-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(255, 102, 0, 0.2) 100%
+      );
+      z-index: 1;
+    }
+
+    .rolla-logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 80px;
+      height: auto;
+      z-index: 10;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+    }
+
+    .slide-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 50%;
+      padding: 40px;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        transparent 100%
+      );
+      z-index: 5;
+      color: white;
+    }
+
+    .slide-content h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: white;
+    }
+
+    .slide-content p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .device-carousel {
+      position: absolute;
+      right: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 300px;
+      height: 400px;
+      z-index: 6;
+    }
+
+    .device-mockup {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transform: scale(0.8) rotate(5deg);
+    }
+
+    .device-mockup.active {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+
+    .device-mockup img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+    }
+
+    .carousel-controls {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+      z-index: 10;
+    }
+
+    .carousel-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .carousel-dot.active {
+      background: var(--coquelicot);
+      transform: scale(1.3);
+      box-shadow: 0 0 15px rgba(255, 102, 0, 0.6);
+    }
+
+    .carousel-arrows {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .carousel-arrow {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-arrow:hover {
+      background: rgba(255, 102, 0, 0.8);
+      transform: scale(1.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .full-width-carousel-section {
+        height: 70vh;
+        min-height: 450px;
+      }
+
+      .rolla-header .section-title {
+        font-size: 2.2rem;
+      }
+
+      .rolla-header .section-subtitle {
+        font-size: 1rem;
+        padding: 6px 15px;
+      }
+
+      .device-carousel {
+        right: 20px;
+        width: 220px;
+        height: 320px;
+      }
+
+      .slide-content {
+        padding: 20px;
+        right: 40%;
+      }
+
+      .slide-content h3 {
+        font-size: 1.8rem;
+      }
+
+      .slide-content p {
+        font-size: 1rem;
+        max-width: 90%;
+      }
+
+      .rolla-logo {
+        width: 60px;
+        top: 15px;
+        right: 15px;
+      }
+
+      .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .full-width-carousel-section {
+        height: 60vh;
+        min-height: 400px;
+      }
+
+      .device-carousel {
+        display: none;
+      }
+
+      .slide-content {
+        position: relative;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        text-align: center;
+        padding: 20px;
+        right: 0;
+        width: 100%;
+        bottom: 0;
+      }
+
+      .slide-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .slide-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .rolla-header .section-title {
+        font-size: 1.8rem;
+      }
+
+      .rolla-header .section-subtitle {
+        font-size: 0.9rem;
+        padding: 5px 12px;
+      }
+
+      .rolla-logo {
+        width: 50px;
+        top: 10px;
+        right: 10px;
+      }
+
+      .carousel-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+      }
+
+      .carousel-controls {
+        bottom: 20px;
+        gap: 10px;
+      }
+
+      .carousel-dot {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Rolla Partnership Section -->
+  <section class="section rolla-partnership" aria-label="rolla partnership">
+    <div class="container">
+      <div class="rolla-header">
+        <p class="section-subtitle">Our Partnership</p>
+        <h2 class="h2 section-title text-center">Track Your Health with Rolla</h2>
+      </div>
     </div>
 
-    <div class="rolla-content">
-      <div class="rolla-text">
-        <div class="rolla-text-content">
-          <p class="rolla-intro">
-            We’ve teamed up with <span class="highlight">Rolla</span> to bring you the ultimate health tracking experience.
-          </p>
-          <p class="rolla-description">
-            Monitor your progress in real-time, gain insights, and stay motivated with cutting-edge technology while training with AG Fitness coaches.
-          </p>
+    <!-- Full Width Carousel Section -->
+    <div class="full-width-carousel-section">
+      <!-- Slide 1 - Rolla World Demo -->
+      <div class="carousel-slide active" style="background-image: url('Rolla World - demo - large.png');">
+        <div class="slide-overlay"></div>
+        <img src="Logo positive@2x.png" alt="Rolla Logo" class="rolla-logo">
+        
+        <div class="slide-content">
+          <h3>Rolla World Experience</h3>
+          <p>Immerse yourself in a comprehensive health ecosystem where every step, heartbeat, and movement is tracked with precision.</p>
         </div>
-        <div class="rolla-benefits">
-          <div class="benefit-item" data-benefit="heart">
-            <div class="benefit-icon-wrapper">
-              <ion-icon name="pulse-outline"></ion-icon>
-              <div class="benefit-glow"></div>
-            </div>
-            <span>Track heart rate & calories in real-time</span>
+
+        <div class="device-carousel">
+          <div class="device-mockup active">
+            <img src="Activities mockup.png" alt="Activities Mockup">
           </div>
-          <div class="benefit-item" data-benefit="sleep">
-            <div class="benefit-icon-wrapper">
-              <ion-icon name="bed-outline"></ion-icon>
-              <div class="benefit-glow"></div>
-            </div>
-            <span>Monitor sleep quality & recovery</span>
+          <div class="device-mockup">
+            <img src="Diet mockup (1).png" alt="Diet Mockup">
           </div>
-          <div class="benefit-item" data-benefit="trophy">
-            <div class="benefit-icon-wrapper">
-              <ion-icon name="trophy-outline"></ion-icon>
-              <div class="benefit-glow"></div>
-            </div>
-            <span>Gamify your fitness journey</span>
+          <div class="device-mockup">
+            <img src="Health mockup.png" alt="Health Mockup">
           </div>
-          <div class="benefit-item" data-benefit="stats">
-            <div class="benefit-icon-wrapper">
-              <ion-icon name="stats-chart-outline"></ion-icon>
-              <div class="benefit-glow"></div>
-            </div>
-            <span>Detailed analytics for your coach</span>
+          <div class="device-mockup">
+            <img src="Rolla One - Diet.png" alt="Rolla One Diet">
+          </div>
+          <div class="device-mockup">
+            <img src="Rolla One - Health.png" alt="Rolla One Health">
+          </div>
+          <div class="device-mockup">
+            <img src="rolla one-activities.png" alt="Rolla One Activities">
           </div>
         </div>
-        <a href="#" class="btn btn-primary rolla-cta">
-          <span>Discover Rolla</span>
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-        </a>
       </div>
 
-      <div class="rolla-carousel-wrapper">
-        <div class="carousel-background"></div>
-        <div class="rolla-carousel">
-          <div class="carousel-inner">
-            <!-- Images will be added dynamically via JavaScript -->
+      <!-- Slide 2 - Jogging Activity HUD Route -->
+      <div class="carousel-slide" style="background-image: url('Jogging_Activity HUD_Route.png');">
+        <div class="slide-overlay"></div>
+        <img src="Logo positive@2x.png" alt="Rolla Logo" class="rolla-logo">
+        
+        <div class="slide-content">
+          <h3>Real-Time Route Tracking</h3>
+          <p>Follow your jogging routes with live GPS tracking, elevation data, and performance metrics displayed on your HUD interface.</p>
+        </div>
+
+        <div class="device-carousel">
+          <div class="device-mockup active">
+            <img src="Activities mockup.png" alt="Activities Mockup">
+          </div>
+          <div class="device-mockup">
+            <img src="Diet mockup (1).png" alt="Diet Mockup">
+          </div>
+          <div class="device-mockup">
+            <img src="Health mockup.png" alt="Health Mockup">
+          </div>
+          <div class="device-mockup">
+            <img src="Rolla One - Diet.png" alt="Rolla One Diet">
+          </div>
+          <div class="device-mockup">
+            <img src="Rolla One - Health.png" alt="Rolla One Health">
+          </div>
+          <div class="device-mockup">
+            <img src="rolla one-activities.png" alt="Rolla One Activities">
           </div>
         </div>
       </div>
+
+      <!-- Slide 3 - Jogging Tutorial -->
+      <div class="carousel-slide" style="background-image: url('Jogging Tutorial_1.png');">
+        <div class="slide-overlay"></div>
+        <img src="Logo positive@2x.png" alt="Rolla Logo" class="rolla-logo">
+        
+        <div class="slide-content">
+          <h3>Guided Training Sessions</h3>
+          <p>Learn proper techniques with interactive tutorials that adapt to your fitness level and provide real-time feedback.</p>
+        </div>
+
+        <div class="device-carousel">
+          <div class="device-mockup active">
+            <img src="Activities mockup.png" alt="Activities Mockup">
+          </div>
+          <div class="device-mockup">
+            <img src="Diet mockup (1).png" alt="Diet Mockup">
+          </div>
+          <div class="device-mockup">
+            <img src="Health mockup.png" alt="Health Mockup">
+          </div>
+          <div class="device-mockup">
+            <img src="Rolla One - Diet.png" alt="Rolla One Diet">
+          </div>
+          <div class="device-mockup">
+            <img src="Rolla One - Health.png" alt="Rolla One Health">
+          </div>
+          <div class="device-mockup">
+            <img src="rolla one-activities.png" alt="Rolla One Activities">
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <div class="carousel-arrows">
+        <button class="carousel-arrow prev" onclick="previousSlide()">‹</button>
+        <button class="carousel-arrow next" onclick="nextSlide()">›</button>
+      </div>
+
+      <div class="carousel-controls">
+        <div class="carousel-dot active" onclick="currentSlide(1)"></div>
+        <div class="carousel-dot" onclick="currentSlide(2)"></div>
+        <div class="carousel-dot" onclick="currentSlide(3)"></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <script>
+    let currentSlideIndex = 0;
+    let currentDeviceIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+
+    // Auto-advance device carousel within each slide
+    function nextDevice() {
+      const currentSlideDevices = slides[currentSlideIndex].querySelectorAll('.device-mockup');
+      currentSlideDevices[currentDeviceIndex].classList.remove('active');
+      currentDeviceIndex = (currentDeviceIndex + 1) % currentSlideDevices.length;
+      currentSlideDevices[currentDeviceIndex].classList.add('active');
+    }
+
+    // Auto-advance main carousel
+    function nextSlide() {
+      slides[currentSlideIndex].classList.remove('active');
+      dots[currentSlideIndex].classList.remove('active');
+      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+      slides[currentSlideIndex].classList.add('active');
+      dots[currentSlideIndex].classList.add('active');
+      currentDeviceIndex = 0;
+      resetDeviceCarousel();
+    }
+
+    function previousSlide() {
+      slides[currentSlideIndex].classList.remove('active');
+      dots[currentSlideIndex].classList.remove('active');
+      currentSlideIndex = currentSlideIndex === 0 ? slides.length - 1 : currentSlideIndex - 1;
+      slides[currentSlideIndex].classList.add('active');
+      dots[currentSlideIndex].classList.add('active');
+      currentDeviceIndex = 0;
+      resetDeviceCarousel();
+    }
+
+    function currentSlide(n) {
+      slides[currentSlideIndex].classList.remove('active');
+      dots[currentSlideIndex].classList.remove('active');
+      currentSlideIndex = n - 1;
+      slides[currentSlideIndex].classList.add('active');
+      dots[currentSlideIndex].classList.add('active');
+      currentDeviceIndex = 0;
+      resetDeviceCarousel();
+    }
+
+    function resetDeviceCarousel() {
+      const currentSlideDevices = slides[currentSlideIndex].querySelectorAll('.device-mockup');
+      currentSlideDevices.forEach((device, index) => {
+        device.classList.toggle('active', index === 0);
+      });
+    }
+
+    // Auto-advance timers
+    setInterval(nextDevice, 2000); // Change device every 2 seconds
+    setInterval(nextSlide, 8000); // Change slide every 8 seconds
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      resetDeviceCarousel();
+    });
+  </script>
+</body>
+</html>
 
       <!-- Trainers Section -->
       <section class="section trainers" id="team" aria-label="trainers"
