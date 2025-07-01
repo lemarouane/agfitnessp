@@ -859,437 +859,8 @@ body {
   font-size: 1em;
 }
 
-/*-----------------------------------*\
-  #ROLLA PARTNERSHIP
-\*-----------------------------------*/
-.rolla-partnership {
-  position: relative;
-  background-color: var(--white);
-  padding-block: var(--section-spacing);
-}
 
-.rolla-header {
-  margin-bottom: 30px; /* Reduced to minimize vertical gap */
-}
 
-.rolla-header .section-subtitle {
-  background-color: var(--coquelicot_10);
-  color: var(--coquelicot);
-  padding: 8px 20px;
-  border-radius: var(--radius-8);
-}
-
-.rolla-header .section-title {
-  color: var(--rich-black-fogra-29-1);
-  margin-block: 15px 0; /* Reduced to minimize vertical gap */
-}
-
-.rolla-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Reduced gap between text and carousel */
-}
-
-.rolla-text {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-}
-
-.rolla-text-content {
-  margin-bottom: 20px; /* Reduced to minimize vertical gap */
-}
-
-.rolla-intro {
-  font-size: 2rem; /* Slightly reduced for better balance */
-  font-weight: 500; /* Removed bold effect */
-  color: var(--rich-black-fogra-29-1);
-  line-height: 1.5;
-  margin-bottom: 10px; /* Reduced to minimize vertical gap */
-}
-
-.rolla-intro .highlight {
-  color: var(--coquelicot);
-  font-weight: 600; /* Slightly heavier but not bold */
-  font-family: var(--ff-catamaran);
-  position: relative;
-  display: inline-block;
-}
-
-.rolla-intro .highlight::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--coquelicot), transparent);
-  opacity: 0.5;
-}
-
-.rolla-description {
-  font-size: 1.7rem; /* Slightly reduced for balance */
-  font-weight: 400; /* Removed bold effect */
-  line-height: 1.6;
-  color: var(--sonic-silver);
-  max-width: 95%; /* Adjusted for better alignment */
-}
-
-.rolla-benefits {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px; /* Reduced gap between benefit items */
-  margin-bottom: 20px; /* Reduced to minimize vertical gap */
-}
-
-.benefit-item {
-  padding: 15px; /* Reduced padding */
-  border-radius: var(--radius-10);
-  display: flex;
-  align-items: center;
-  gap: 12px; /* Reduced gap between icon and text */
-  transition: all 0.4s ease;
-  position: relative;
-  border: 1px solid var(--light-gray);
-}
-
-.benefit-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px hsla(0, 0%, 0%, 0.1);
-}
-
-.benefit-icon-wrapper {
-  position: relative;
-  width: 36px; /* Slightly smaller for balance */
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.benefit-item ion-icon {
-  font-size: 24px; /* Slightly smaller for balance */
-  color: var(--coquelicot);
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.benefit-glow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle, 
-    hsla(19, 89%, 54%, 0.3) 20%, 
-    transparent 70%
-  );
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
-}
-
-.benefit-item:hover ion-icon {
-  transform: scale(1.1) rotate(8deg);
-  color: var(--rich-black-fogra-29-1);
-}
-
-.benefit-item:hover .benefit-glow {
-  opacity: 1;
-  animation: glowPulse 1.5s ease-in-out infinite;
-}
-
-@keyframes glowPulse {
-  0%, 100% { transform: scale(1); opacity: 0.5; }
-  50% { transform: scale(1.3); opacity: 0.8; }
-}
-
-.benefit-item span {
-  font-size: 1.4rem; /* Slightly smaller for balance */
-  font-weight: 500;
-  color: var(--rich-black-fogra-29-1);
-  transition: color 0.3s ease;
-}
-
-.benefit-item:hover span {
-  color: var(--coquelicot);
-}
-
-.rolla-cta {
-  position: relative;
-  overflow: hidden;
-  padding: 12px 35px; /* Slightly smaller for balance */
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.5rem;
-  font-weight: 600;
-  border-radius: var(--radius-10);
-  transition: all 0.3s ease;
-  width: max-content;
-}
-
-.rolla-cta::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg, 
-    transparent, 
-    hsla(19, 89%, 54%, 0.3), 
-    transparent
-  );
-  transition: left 0.5s ease;
-  z-index: -1;
-}
-
-.rolla-cta:hover::before {
-  left: 100%;
-}
-
-.rolla-cta ion-icon {
-  font-size: 18px;
-  transition: transform 0.3s ease;
-}
-
-.rolla-cta:hover ion-icon {
-  transform: translateX(5px);
-}
-
-.rolla-cta:hover {
-  background-color: var(--white);
-  color: var(--coquelicot);
-  box-shadow: 0 0 15px hsla(19, 89%, 54%, 0.2);
-}
-
-.rolla-carousel-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--gainsboro);
-  border-radius: var(--radius-10);
-  z-index: -1;
-}
-
-.rolla-carousel {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-inner {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-img {
-  position: absolute;
-  width: auto;
-  object-fit: contain;
-  opacity: 0;
-  transition: none;
-  filter: drop-shadow(0 8px 15px hsla(0, 0%, 0%, 0.1));
-}
-
-.carousel-img.active {
-  opacity: 1;
-}
-
-.futuristic-zoom {
-  animation: futuristicZoom 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-.holographic-flip {
-  animation: holographicFlip 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-}
-
-.neon-fade {
-  animation: neonFade 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-}
-
-.particle-dissolve {
-  animation: particleDissolve 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
-}
-
-@keyframes futuristicZoom {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-    filter: blur(5px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    filter: blur(0);
-  }
-}
-
-@keyframes holographicFlip {
-  0% {
-    opacity: 0;
-    transform: rotateY(90deg) scale(0.5);
-  }
-  50% {
-    opacity: 0.7;
-    transform: rotateY(0) scale(1.1);
-  }
-  100% {
-    opacity: 1;
-    transform: rotateY(0) scale(1);
-  }
-}
-
-@keyframes neonFade {
-  0% {
-    opacity: 0;
-    transform: scale(1.1);
-    box-shadow: 0 0 30px var(--coquelicot);
-  }
-  50% {
-    opacity: 0.8;
-    box-shadow: 0 0 60px var(--coquelicot);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    box-shadow: 0 0 0 transparent;
-  }
-}
-
-@keyframes particleDissolve {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-    filter: brightness(3) contrast(2);
-  }
-  50% {
-    opacity: 0.5;
-    filter: brightness(2) contrast(1.5);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    filter: brightness(1) contrast(1);
-  }
-}
-
-/* Responsive Adjustments */
-@media (min-width: 992px) {
-  .rolla-content {
-    flex-direction: row;
-    align-items: center; /* Align items to center to remove vertical gap */
-    gap: 30px; /* Reduced horizontal gap between text and carousel */
-  }
-
-  .rolla-text {
-    flex: 1;
-    padding-right: 20px; /* Reduced padding to minimize horizontal gap */
-  }
-
-  .rolla-carousel-wrapper {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto; /* Allow height to adjust based on content */
-  }
-
-  .rolla-carousel {
-    height: 100%; /* Match the height of the text content */
-  }
-
-  .carousel-inner {
-    height: 100%;
-  }
-
-  .carousel-img {
-    height: auto;
-    width: 100%; /* Make images fill the entire width of the carousel wrapper */
-    max-width: none; /* Remove max-width to allow full expansion */
-    max-height: 600px; /* Cap the height to avoid overflow */
-  }
-}
-
-@media (max-width: 768px) {
-  .rolla-intro {
-    font-size: 1.8rem;
-  }
-
-  .rolla-description {
-    font-size: 1.6rem;
-    max-width: 100%;
-  }
-
-  .benefit-item {
-    padding: 12px;
-  }
-
-  .benefit-item span {
-    font-size: 1.3rem;
-  }
-
-  .rolla-cta {
-    padding: 10px 25px;
-    font-size: 1.4rem;
-  }
-
-  .rolla-carousel-wrapper {
-    height: 350px;
-  }
-
-  .carousel-img {
-    width: 100%;
-    max-height: 350px;
-  }
-}
-
-@media (max-width: 480px) {
-  .rolla-header .section-title {
-    font-size: var(--fs-3);
-  }
-
-  .rolla-intro {
-    font-size: 1.6rem;
-  }
-
-  .rolla-description {
-    font-size: 1.5rem;
-  }
-
-  .benefit-item {
-    flex-direction: column;
-    text-align: center;
-    padding: 12px;
-  }
-
-  .benefit-icon-wrapper {
-    margin-bottom: 8px;  
-  }
-
-  .rolla-carousel-wrapper {
-    height: 250px;
-  }
-
-  .carousel-img {
-    width: 100%;
-    max-height: 250px;
-  }
-}
 /*-----------------------------------*\
   #TRAINERS
 \*-----------------------------------*/
@@ -2447,4 +2018,427 @@ body {
 
 .success-message .check-icon {
   font-size: 1.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Rolla Partnership Section Styles */
+.rolla-partnership {
+  position: relative;
+  background-color: var(--white);
+  padding-block: var(--section-spacing);
+  overflow: hidden;
+}
+
+.rolla-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.full-width-carousel-section {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 80vh;
+  min-height: 600px;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(255, 102, 0, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.rolla-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: auto;
+  z-index: 10;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  padding: 40px;
+  z-index: 5;
+  color: white;
+}
+
+.slide-content h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.slide-content p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.device-carousel {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 400px;
+  z-index: 6;
+}
+
+.device-mockup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: scale(0.8) rotate(5deg);
+}
+
+.device-mockup.active {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.device-mockup img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+}
+
+.carousel-controls {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.carousel-dot.active {
+  background: var(--coquelicot);
+  transform: scale(1.3);
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.6);
+}
+
+.carousel-arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.carousel-arrow {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-arrow:hover {
+  background: rgba(255, 102, 0, 0.8);
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .full-width-carousel-section {
+    height: 70vh;
+    min-height: 450px;
+  }
+
+  .rolla-header .section-title {
+    font-size: 2.2rem;
+  }
+
+  .rolla-header .section-subtitle {
+    font-size: 1rem;
+    padding: 6px 15px;
+  }
+
+  .device-carousel {
+    right: 20px;
+    width: 220px;
+    height: 320px;
+  }
+
+  .slide-content {
+    padding: 20px;
+    right: 40%;
+  }
+
+  .slide-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .slide-content p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .rolla-logo {
+    width: 60px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .full-width-carousel-section {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  /* Move last slide background image to the left for Jogging Tutorial */
+  .carousel-slide:nth-child(3) {
+    background-position: right center;
+  }
+
+  /* Make device carousel visible and position at bottom-left */
+  .device-carousel {
+    display: block;
+    width: 180px;
+    height: 260px;
+    right: 0px; /* Position at max left */
+    bottom: 10px; /* Position at max bottom */
+    top: auto;
+    left: auto;
+    transform: none; /* Remove previous centering transforms */
+  }
+
+  .slide-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 280px; /* Adjusted to accommodate device carousel */
+    right: 0;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .slide-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .slide-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .rolla-header .section-title {
+    font-size: 1.8rem;
+  }
+
+  .rolla-header .section-subtitle {
+    font-size: 0.9rem;
+    padding: 5px 12px;
+  }
+
+  .rolla-logo {
+    width: 50px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .carousel-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .carousel-controls {
+    bottom: 20px;
+    gap: 10px;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+.success-message {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.success-message.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.success-message .check-icon {
+  font-size: 1.3rem;
+}
+
+.celebration-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  opacity: 0.8;
+  animation: fall 4s linear infinite;
+}
+
+.emoji-particle {
+  position: absolute;
+  font-size: 24px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.fitness-particle {
+  position: absolute;
+  font-size: 20px;
+  animation: burst 2.5s ease-out infinite;
+}
+
+.firework {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: firework 1s ease-out forwards;
+}
+
+.success-pulse {
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100vh) rotate(0deg); opacity: 0.8; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  50% { transform: translateY(-20px) scale(1.2); opacity: 0.7; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes burst {
+  0% { transform: scale(0); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes firework {
+  0% { transform: translate(0, 0); opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)); opacity: 0; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }

@@ -17,7 +17,8 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&family=Roboto:wght@400;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@0.12.0/dist/js-confetti.browser.js"></script>
 
   <!-- Preload Images -->
   <link rel="preload" as="image" href="./assets/images/hero-banner.png">
@@ -62,54 +63,55 @@
   <!-- Main Content -->
   <main>
     <article>
+      <!-- Hero Section -->
       <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero"
-      style="background-image: url('./assets/images/hero-bg.png')">
-      <div class="container">
-        <div class="hero-content">
-          <h1 class="h1 hero-title">Own Your Fitness Journey</h1>
-          <p class="section-text">
-            Team up with AG Fitness coaches and the Rolla app to track calories, steps, heart rate, and more in real-time, with personalized plans to crush your goals.
-          </p>
-          <a href="#" class="btn btn-primary">Book Your Free Consultation</a>
-        </div>
-    
-        <div class="hero-banner">
-          <img src="./assets/images/93.png" width="660" height="753" alt="Coach with Rolla smart band" class="w-100">
-          <img src="./assets/images/hero-circle-one.png" width="666" height="666" aria-hidden="true" alt=""
-            class="circle circle-1">
-          <img src="./assets/images/hero-circle-two.png" width="666" height="666" aria-hidden="true" alt=""
-            class="circle circle-2">
-          <!-- Top Metric Elements Emerging from Rolla Band -->
-          <div class="metric metric-top-kcal">
-            <ion-icon name="flame-outline"></ion-icon>
-            <span>500 kcal</span>
+        style="background-image: url('./assets/images/hero-bg.png')">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="h1 hero-title">Own Your Fitness Journey</h1>
+            <p class="section-text">
+              Team up with AG Fitness coaches and the Rolla app to track calories, steps, heart rate, and more in real-time, with personalized plans to crush your goals.
+            </p>
+            <a href="#" class="btn btn-primary">Book Your Free Consultation</a>
           </div>
-          <div class="metric metric-top-steps">
-            <ion-icon name="footsteps-outline"></ion-icon>
-            <span>10,000</span>
-          </div>
-          <div class="metric metric-top-bpm">
-            <ion-icon name="pulse-outline"></ion-icon>
-            <span>80 bpm</span>
-          </div>
-          <!-- Bottom Metric Elements Emerging from Rolla Band -->
-          <div class="metric metric-bottom-minutes">
-            <ion-icon name="time-outline"></ion-icon>
-            <span>45 min</span>
-          </div>
-          <div class="metric metric-bottom-distance">
-            <ion-icon name="trail-sign-outline"></ion-icon>
-            <span>5 km</span>
-          </div>
-          <div class="metric metric-bottom-sleep">
-            <ion-icon name="bed-outline"></ion-icon>
-            <span>7 hrs</span>
-          </div>
-        </div>
-      </div>
-    </section>
 
-      <!-- Clients Transformations Section -->
+          <div class="hero-banner">
+            <img src="./assets/images/93.png" width="660" height="753" alt="Coach with Rolla smart band" class="w-100">
+            <img src="./assets/images/hero-circle-one.png" width="666" height="666" aria-hidden="true" alt=""
+              class="circle circle-1">
+            <img src="./assets/images/hero-circle-two.png" width="666" height="666" aria-hidden="true" alt=""
+              class="circle circle-2">
+            <!-- Top Metric Elements -->
+            <div class="metric metric-top-kcal">
+              <ion-icon name="flame-outline"></ion-icon>
+              <span>500 kcal</span>
+            </div>
+            <div class="metric metric-top-steps">
+              <ion-icon name="footsteps-outline"></ion-icon>
+              <span>10,000</span>
+            </div>
+            <div class="metric metric-top-bpm">
+              <ion-icon name="pulse-outline"></ion-icon>
+              <span>80 bpm</span>
+            </div>
+            <!-- Bottom Metric Elements -->
+            <div class="metric metric-bottom-minutes">
+              <ion-icon name="time-outline"></ion-icon>
+              <span>45 min</span>
+            </div>
+            <div class="metric metric-bottom-distance">
+              <ion-icon name="trail-sign-outline"></ion-icon>
+              <span>5 km</span>
+            </div>
+            <div class="metric metric-bottom-sleep">
+              <ion-icon name="bed-outline"></ion-icon>
+              <span>7 hrs</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transformations Section -->
       <section class="section transformations" id="transformations" aria-label="transformations">
         <div class="container">
           <p class="section-subtitle">Our Clients</p>
@@ -205,7 +207,7 @@
           <div class="modal-body">
             <div class="modal-media">
               <img id="modalImage" alt="Modal Image" style="display: none;">
-              <video id="modalVideo" style="display: none;"></video>
+              <video id="modalVideo" controls style="display: none;"></video>
             </div>
             <div class="modal-text">
               <h3 id="modalTitle"></h3>
@@ -219,540 +221,118 @@
         </div>
       </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-  <style>
-    /* Root Variables */
-    :root {
-      --coquelicot: #ff5100;
-      --coquelicot_10: rgba(255, 81, 0, 0.1);
-      --rich-black-fogra-29-1: #0a0a0a;
-      --sonic-silver: #757575;
-      --white: #ffffff;
-      --section-spacing: 60px;
-      --radius-8: 8px;
-    }
-
-    /* Reset and Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    /* Rolla Partnership Section Styles */
-    .rolla-partnership {
-      position: relative;
-      background-color: var(--white);
-      padding-block: var(--section-spacing);
-      overflow: hidden;
-    }
-
-    .rolla-header {
-      margin-bottom: 40px;
-      text-align: center;
-    }
-
-    .rolla-header .section-subtitle {
-      background-color: var(--coquelicot_10);
-      color: var(--coquelicot);
-      padding: 8px 20px;
-      border-radius: var(--radius-8);
-      display: inline-block;
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
-
-    .rolla-header .section-title {
-      color: var(--rich-black-fogra-29-1);
-      font-family: 'Poppins', sans-serif;
-      font-size: 2.8rem;
-      font-weight: 600;
-      margin: 0;
-      line-height: 1.2;
-    }
-
-    .full-width-carousel-section {
-      position: relative;
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      height: 80vh;
-      min-height: 600px;
-      overflow: hidden;
-      border-radius: 0;
-    }
-
-    .carousel-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    .carousel-slide.active {
-      opacity: 1;
-    }
-
-    .slide-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.1) 50%,
-        rgba(255, 102, 0, 0.2) 100%
-      );
-      z-index: 1;
-    }
-
-    .rolla-logo {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 80px;
-      height: auto;
-      z-index: 10;
-      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
-    }
-
-    .slide-content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 50%;
-      padding: 40px;
-      background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.8) 0%,
-        rgba(0, 0, 0, 0.4) 50%,
-        transparent 100%
-      );
-      z-index: 5;
-      color: white;
-    }
-
-    .slide-content h3 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-      color: white;
-    }
-
-    .slide-content p {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.2rem;
-      line-height: 1.6;
-      max-width: 600px;
-      margin-bottom: 30px;
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .device-carousel {
-      position: absolute;
-      right: 60px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 300px;
-      height: 400px;
-      z-index: 6;
-    }
-
-    .device-mockup {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      transform: scale(0.8) rotate(5deg);
-    }
-
-    .device-mockup.active {
-      opacity: 1;
-      transform: scale(1) rotate(0deg);
-    }
-
-    .device-mockup img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
-    }
-
-    .carousel-controls {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 15px;
-      z-index: 10;
-    }
-
-    .carousel-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.5);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      border: 2px solid transparent;
-    }
-
-    .carousel-dot.active {
-      background: var(--coquelicot);
-      transform: scale(1.3);
-      box-shadow: 0 0 15px rgba(255, 102, 0, 0.6);
-    }
-
-    .carousel-arrows {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100%;
-      z-index: 10;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 20px;
-    }
-
-    .carousel-arrow {
-      background: rgba(255, 255, 255, 0.2);
-      border: none;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      color: white;
-      font-size: 24px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .carousel-arrow:hover {
-      background: rgba(255, 102, 0, 0.8);
-      transform: scale(1.1);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .full-width-carousel-section {
-        height: 70vh;
-        min-height: 450px;
-      }
-
-      .rolla-header .section-title {
-        font-size: 2.2rem;
-      }
-
-      .rolla-header .section-subtitle {
-        font-size: 1rem;
-        padding: 6px 15px;
-      }
-
-      .device-carousel {
-        right: 20px;
-        width: 220px;
-        height: 320px;
-      }
-
-      .slide-content {
-        padding: 20px;
-        right: 40%;
-      }
-
-      .slide-content h3 {
-        font-size: 1.8rem;
-      }
-
-      .slide-content p {
-        font-size: 1rem;
-        max-width: 90%;
-      }
-
-      .rolla-logo {
-        width: 60px;
-        top: 15px;
-        right: 15px;
-      }
-
-      .carousel-arrow {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .full-width-carousel-section {
-        height: 60vh;
-        min-height: 400px;
-      }
-
-      .device-carousel {
-        display: none;
-      }
-
-      .slide-content {
-        position: relative;
-        background: rgba(0, 0, 0, 0.7);
-        color: white;
-        text-align: center;
-        padding: 20px;
-        right: 0;
-        width: 100%;
-        bottom: 0;
-      }
-
-      .slide-content h3 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-      }
-
-      .slide-content p {
-        font-size: 0.9rem;
-        line-height: 1.5;
-      }
-
-      .rolla-header .section-title {
-        font-size: 1.8rem;
-      }
-
-      .rolla-header .section-subtitle {
-        font-size: 0.9rem;
-        padding: 5px 12px;
-      }
-
-      .rolla-logo {
-        width: 50px;
-        top: 10px;
-        right: 10px;
-      }
-
-      .carousel-arrow {
-        width: 35px;
-        height: 35px;
-        font-size: 18px;
-      }
-
-      .carousel-controls {
-        bottom: 20px;
-        gap: 10px;
-      }
-
-      .carousel-dot {
-        width: 10px;
-        height: 10px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- Rolla Partnership Section -->
-  <section class="section rolla-partnership" aria-label="rolla partnership">
-    <div class="container">
-      <div class="rolla-header">
-        <p class="section-subtitle">Our Partnership</p>
-        <h2 class="h2 section-title text-center">Track Your Health with Rolla</h2>
-      </div>
-    </div>
-
-    <!-- Full Width Carousel Section -->
-    <div class="full-width-carousel-section">
-      <!-- Slide 1 - Rolla World Demo -->
-      <div class="carousel-slide active" style="background-image: url('Rolla World - demo - large.png');">
-        <div class="slide-overlay"></div>
-        <img src="Logo positive@2x.png" alt="Rolla Logo" class="rolla-logo">
-        
-        <div class="slide-content">
-          <h3>Rolla World Experience</h3>
-          <p>Immerse yourself in a comprehensive health ecosystem where every step, heartbeat, and movement is tracked with precision.</p>
-        </div>
-
-        <div class="device-carousel">
-          <div class="device-mockup active">
-            <img src="Activities mockup.png" alt="Activities Mockup">
+      <!-- Rolla Partnership Section -->
+      <section class="section rolla-partnership" aria-label="rolla partnership">
+        <div class="container">
+          <div class="rolla-header">
+            <p class="section-subtitle">Our Partnership</p>
+            <h2 class="h2 section-title text-center">Track Your Health with Rolla</h2>
           </div>
-          <div class="device-mockup">
-            <img src="Diet mockup (1).png" alt="Diet Mockup">
-          </div>
-          <div class="device-mockup">
-            <img src="Health mockup.png" alt="Health Mockup">
-          </div>
-          <div class="device-mockup">
-            <img src="Rolla One - Diet.png" alt="Rolla One Diet">
-          </div>
-          <div class="device-mockup">
-            <img src="Rolla One - Health.png" alt="Rolla One Health">
-          </div>
-          <div class="device-mockup">
-            <img src="rolla one-activities.png" alt="Rolla One Activities">
+
+          <div class="full-width-carousel-section">
+            <!-- Slide 1 - Rolla World Demo -->
+            <div class="carousel-slide active" style="background-image: url('./assets/images/Rolla/Rolla World - demo - large.png');">
+              <div class="slide-overlay"></div>
+              <img src="./assets/images/Rolla/Logo positive@2x.png" alt="Rolla Logo" class="rolla-logo">
+              <div class="slide-content">
+                <h3>Rolla World Experience</h3>
+                <p>Immerse yourself in a comprehensive health ecosystem where every step, heartbeat, and movement is tracked with precision.</p>
+              </div>
+              <div class="device-carousel">
+                <div class="device-mockup active">
+                  <img src="./assets/images/Rolla/Activities mockup.png" alt="Activities Mockup">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/Diet mockup (1).png" alt="Diet Mockup">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/Health mockup.png" alt="Health Mockup">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/Rolla One - Diet.png" alt="Rolla One Diet">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/Rolla One - Health.png" alt="Rolla One Health">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/rolla one-activities.png" alt="Rolla One Activities">
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 - Jogging Activity HUD Route -->
+            <div class="carousel-slide" style="background-image: url('./assets/images/Rolla/Jogging_Activity HUD_Route.png');">
+              <div class="slide-overlay"></div>
+              <img src="./assets/images/Rolla/Logo positive@2x.png" alt="Rolla Logo" class="rolla-logo">
+              <div class="slide-content">
+                <h3>Real-Time Route Tracking</h3>
+                <p>Follow your jogging routes with live GPS tracking, elevation data, and performance metrics displayed on your HUD interface.</p>
+              </div>
+              <div class="device-carousel">
+                <div class="device-mockup active">
+                  <img src="./assets/images/Rolla/Activities mockup.png" alt="Activities Mockup">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/Diet mockup (1).png" alt="Diet Mockup">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/Health mockup.png" alt="Health Mockup">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/Rolla One - Diet.png" alt="Rolla One Diet">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/Rolla One - Health.png" alt="Rolla One Health">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/rolla one-activities.png" alt="Rolla One Activities">
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 - Jogging Tutorial -->
+            <div class="carousel-slide" style="background-image: url('./assets/images/Rolla/Jogging Tutorial_1.png');">
+              <div class="slide-overlay"></div>
+              <img src="./assets/images/Rolla/Logo positive@2x.png" alt="Rolla Logo" class="rolla-logo">
+              <div class="slide-content">
+                <h3>Guided Training Sessions</h3>
+                <p>Learn proper techniques with interactive tutorials that adapt to your fitness level and provide real-time feedback.</p>
+              </div>
+              <div class="device-carousel">
+                <div class="device-mockup active">
+                  <img src="./assets/images/Rolla/Activities mockup.png" alt="Activities Mockup">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/Diet mockup (1).png" alt="Diet Mockup">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/Health mockup.png" alt="Health Mockup">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/Rolla One - Diet.png" alt="Rolla One Diet">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/Rolla One - Health.png" alt="Rolla One Health">
+                </div>
+                <div class="device-mockup">
+                  <img src="./assets/images/Rolla/rolla one-activities.png" alt="Rolla One Activities">
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <div class="carousel-arrows">
+              <button class="carousel-arrow prev" onclick="previousSlide()">‹</button>
+              <button class="carousel-arrow next" onclick="nextSlide()">›</button>
+            </div>
+            <div class="carousel-controls">
+              <div class="carousel-dot active" onclick="currentSlide(1)"></div>
+              <div class="carousel-dot" onclick="currentSlide(2)"></div>
+              <div class="carousel-dot" onclick="currentSlide(3)"></div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- Slide 2 - Jogging Activity HUD Route -->
-      <div class="carousel-slide" style="background-image: url('Jogging_Activity HUD_Route.png');">
-        <div class="slide-overlay"></div>
-        <img src="Logo positive@2x.png" alt="Rolla Logo" class="rolla-logo">
-        
-        <div class="slide-content">
-          <h3>Real-Time Route Tracking</h3>
-          <p>Follow your jogging routes with live GPS tracking, elevation data, and performance metrics displayed on your HUD interface.</p>
-        </div>
-
-        <div class="device-carousel">
-          <div class="device-mockup active">
-            <img src="Activities mockup.png" alt="Activities Mockup">
-          </div>
-          <div class="device-mockup">
-            <img src="Diet mockup (1).png" alt="Diet Mockup">
-          </div>
-          <div class="device-mockup">
-            <img src="Health mockup.png" alt="Health Mockup">
-          </div>
-          <div class="device-mockup">
-            <img src="Rolla One - Diet.png" alt="Rolla One Diet">
-          </div>
-          <div class="device-mockup">
-            <img src="Rolla One - Health.png" alt="Rolla One Health">
-          </div>
-          <div class="device-mockup">
-            <img src="rolla one-activities.png" alt="Rolla One Activities">
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3 - Jogging Tutorial -->
-      <div class="carousel-slide" style="background-image: url('Jogging Tutorial_1.png');">
-        <div class="slide-overlay"></div>
-        <img src="Logo positive@2x.png" alt="Rolla Logo" class="rolla-logo">
-        
-        <div class="slide-content">
-          <h3>Guided Training Sessions</h3>
-          <p>Learn proper techniques with interactive tutorials that adapt to your fitness level and provide real-time feedback.</p>
-        </div>
-
-        <div class="device-carousel">
-          <div class="device-mockup active">
-            <img src="Activities mockup.png" alt="Activities Mockup">
-          </div>
-          <div class="device-mockup">
-            <img src="Diet mockup (1).png" alt="Diet Mockup">
-          </div>
-          <div class="device-mockup">
-            <img src="Health mockup.png" alt="Health Mockup">
-          </div>
-          <div class="device-mockup">
-            <img src="Rolla One - Diet.png" alt="Rolla One Diet">
-          </div>
-          <div class="device-mockup">
-            <img src="Rolla One - Health.png" alt="Rolla One Health">
-          </div>
-          <div class="device-mockup">
-            <img src="rolla one-activities.png" alt="Rolla One Activities">
-          </div>
-        </div>
-      </div>
-
-      <!-- Carousel Controls -->
-      <div class="carousel-arrows">
-        <button class="carousel-arrow prev" onclick="previousSlide()">‹</button>
-        <button class="carousel-arrow next" onclick="nextSlide()">›</button>
-      </div>
-
-      <div class="carousel-controls">
-        <div class="carousel-dot active" onclick="currentSlide(1)"></div>
-        <div class="carousel-dot" onclick="currentSlide(2)"></div>
-        <div class="carousel-dot" onclick="currentSlide(3)"></div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    let currentSlideIndex = 0;
-    let currentDeviceIndex = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.carousel-dot');
-
-    // Auto-advance device carousel within each slide
-    function nextDevice() {
-      const currentSlideDevices = slides[currentSlideIndex].querySelectorAll('.device-mockup');
-      currentSlideDevices[currentDeviceIndex].classList.remove('active');
-      currentDeviceIndex = (currentDeviceIndex + 1) % currentSlideDevices.length;
-      currentSlideDevices[currentDeviceIndex].classList.add('active');
-    }
-
-    // Auto-advance main carousel
-    function nextSlide() {
-      slides[currentSlideIndex].classList.remove('active');
-      dots[currentSlideIndex].classList.remove('active');
-      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-      slides[currentSlideIndex].classList.add('active');
-      dots[currentSlideIndex].classList.add('active');
-      currentDeviceIndex = 0;
-      resetDeviceCarousel();
-    }
-
-    function previousSlide() {
-      slides[currentSlideIndex].classList.remove('active');
-      dots[currentSlideIndex].classList.remove('active');
-      currentSlideIndex = currentSlideIndex === 0 ? slides.length - 1 : currentSlideIndex - 1;
-      slides[currentSlideIndex].classList.add('active');
-      dots[currentSlideIndex].classList.add('active');
-      currentDeviceIndex = 0;
-      resetDeviceCarousel();
-    }
-
-    function currentSlide(n) {
-      slides[currentSlideIndex].classList.remove('active');
-      dots[currentSlideIndex].classList.remove('active');
-      currentSlideIndex = n - 1;
-      slides[currentSlideIndex].classList.add('active');
-      dots[currentSlideIndex].classList.add('active');
-      currentDeviceIndex = 0;
-      resetDeviceCarousel();
-    }
-
-    function resetDeviceCarousel() {
-      const currentSlideDevices = slides[currentSlideIndex].querySelectorAll('.device-mockup');
-      currentSlideDevices.forEach((device, index) => {
-        device.classList.toggle('active', index === 0);
-      });
-    }
-
-    // Auto-advance timers
-    setInterval(nextDevice, 2000); // Change device every 2 seconds
-    setInterval(nextSlide, 8000); // Change slide every 8 seconds
-
-    // Initialize on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      resetDeviceCarousel();
-    });
-  </script>
-</body>
-</html>
+      </section>
 
       <!-- Trainers Section -->
       <section class="section trainers" id="team" aria-label="trainers"
@@ -760,7 +340,6 @@
         <div class="container">
           <p class="section-subtitle">Our Trainers</p>
           <h2 class="h2 section-title text-center">Trainers</h2>
-
           <ul class="trainers-list has-scrollbar">
             <li class="scrollbar-item">
               <img src="./assets/images/Trainers/1.png" loading="lazy" alt="Trainer 1" class="img-cover trainer-img">
@@ -784,48 +363,48 @@
         </div>
       </section>
 
-<!-- Redefine Progress Section -->
-<section class="section redefine-progress" aria-label="redefine progress">
-  <div class="progress-container">
-    <p class="section-subtitle">Our Philosophy</p>
-    <h2 class="h2 section-title text-center">Let’s Redefine Progress</h2>
-    <div class="progress-content">
-      <p class="progress-intro">
-        Progress is often seen as something that only counts at the <em>finish line</em> — when you've hit a <em>goal weight</em>, 
-        carved out abs or caught up to people who've been training for years.
-      </p>
-      <p class="progress-intro">
-        But with us, progress starts the moment you <em>choose to show up</em> — and it comes in <em>many forms</em>, not just physical ones.
-      </p>
-      <div class="word-cloud">
-        <div class="word-cloud-row">
-          <span class="word word-1">Getting out of bed</span>
-          <span class="word-separator">|</span>
-          <span class="word word-2">More Energy</span>
-          <span class="word-separator">|</span>
-          <span class="word word-3">Sleeping through</span>
+      <!-- Redefine Progress Section -->
+      <section class="section redefine-progress" aria-label="redefine progress">
+        <div class="progress-container">
+          <p class="section-subtitle">Our Philosophy</p>
+          <h2 class="h2 section-title text-center">Let’s Redefine Progress</h2>
+          <div class="progress-content">
+            <p class="progress-intro">
+              Progress is often seen as something that only counts at the <em>finish line</em> — when you've hit a <em>goal weight</em>, 
+              carved out abs or caught up to people who've been training for years.
+            </p>
+            <p class="progress-intro">
+              But with us, progress starts the moment you <em>choose to show up</em> — and it comes in <em>many forms</em>, not just physical ones.
+            </p>
+            <div class="word-cloud">
+              <div class="word-cloud-row">
+                <span class="word word-1">Getting out of bed</span>
+                <span class="word-separator">|</span>
+                <span class="word word-2">More Energy</span>
+                <span class="word-separator">|</span>
+                <span class="word word-3">Sleeping through</span>
+              </div>
+              <div class="word-cloud-row">
+                <span class="word word-4">Feeling Stronger</span>
+                <span class="word-separator">|</span>
+                <span class="word word-5">Saying No</span>
+                <span class="word-separator">|</span>
+                <span class="word word-6">Trusting your body</span>
+              </div>
+              <div class="word-cloud-row">
+                <span class="word word-7">Showing up</span>
+                <span class="word-separator">|</span>
+                <span class="word word-8">Eating without shame</span>
+                <span class="word-separator">|</span>
+                <span class="word word-9">Feeling your core</span>
+              </div>
+              <div class="word-cloud-row">
+                <span class="word word-10">I feel good</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="word-cloud-row">
-          <span class="word word-4">Feeling Stronger</span>
-          <span class="word-separator">|</span>
-          <span class="word word-5">Saying No</span>
-          <span class="word-separator">|</span>
-          <span class="word word-6">Trusting your body</span>
-        </div>
-        <div class="word-cloud-row">
-          <span class="word word-7">Showing up</span>
-          <span class="word-separator">|</span>
-          <span class="word word-8">Eating without shame</span>
-          <span class="word-separator">|</span>
-          <span class="word word-9">Feeling your core</span>
-        </div>
-        <div class="word-cloud-row">
-          <span class="word word-10">I feel good</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       <!-- Contact Section -->
       <section class="section contact" id="contact" aria-label="contact">
@@ -872,7 +451,7 @@
                 <input type="text" name="comment" placeholder="Your Goal!" required class="input-field">
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
-              <div id="successMessage" class="success-message" style="display: none;">
+              <div id="successMessage" class="success-message">
                 <span class="check-icon">✔️</span>
                 <p>Thank you for contacting us!</p>
               </div>
@@ -907,7 +486,6 @@
             <li><a href="mailto:info@agfitnessdxb.com" class="social-link"><ion-icon name="mail"></ion-icon></a></li>
           </ul>
         </div>
-
         <ul class="footer-list">
           <li><p class="footer-list-title has-before">Useful Links</p></li>
           <li><a href="./index.html" class="footer-link">Home</a></li>
@@ -917,7 +495,6 @@
           <li><a href="./blog.html" class="footer-link">Blog</a></li>
           <li><a href="./contact.html" class="footer-link">Contact</a></li>
         </ul>
-
         <ul class="footer-list">
           <li><p class="footer-list-title has-before">Contact Us</p></li>
           <li class="footer-list-item">
@@ -937,7 +514,6 @@
             <div><a href="mailto:info@agfitnessdxb.com" class="footer-link">info@agfitnessdxb.com</a></div>
           </li>
         </ul>
-
         <ul class="footer-list">
           <li><p class="footer-list-title has-before">Tips & Guides</p></li>
           <li>
@@ -970,7 +546,6 @@
         </ul>
       </div>
     </div>
-
     <div class="footer-bottom">
       <div class="container">
         <p class="copyright">
@@ -991,6 +566,10 @@
   </a>
 
   <!-- Scripts -->
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
   <!-- Transformation Modal Script -->
   <script>
     function openModal(title, goal, result, time, quote, mediaSrc, isVideo) {
@@ -1009,7 +588,6 @@
         modalImage.style.display = 'none';
         modalVideo.style.display = 'block';
         modalVideo.src = mediaSrc;
-
         modalVideo.addEventListener('loadedmetadata', () => {
           const aspectRatio = modalVideo.videoWidth / modalVideo.videoHeight;
           if (aspectRatio > 1) {
@@ -1020,7 +598,6 @@
             modalVideo.style.height = '100%';
           }
         }, { once: true });
-
         modalVideo.play();
       } else {
         modalVideo.style.display = 'none';
@@ -1037,13 +614,11 @@
     function closeModal() {
       const modal = document.getElementById('transformationModal');
       modal.classList.remove('open');
-      
       const modalVideo = document.getElementById('modalVideo');
       if (modalVideo) {
         modalVideo.pause();
         modalVideo.src = '';
       }
-
       setTimeout(() => {
         modal.style.display = 'none';
       }, 300);
@@ -1057,194 +632,252 @@
     }
   </script>
 
-  <!-- Transformations Carousel Script -->
+  <!-- Rolla Partnership Carousel Script -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const carousel = document.querySelector('.transformations-list');
-      let scrollAmount = 0;
-      const scrollStep = carousel.querySelector('.scrollbar-item').offsetWidth;
-      const intervalTime = 3000;
+    let currentSlideIndex = 0;
+    let currentDeviceIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
 
-      function slide() {
-        scrollAmount += scrollStep;
-        if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
-          scrollAmount = 0;
-        }
-        carousel.scrollTo({
-          left: scrollAmount,
-          behavior: 'smooth'
-        });
-      }
+    function nextDevice() {
+      const currentSlideDevices = slides[currentSlideIndex].querySelectorAll('.device-mockup');
+      currentSlideDevices[currentDeviceIndex].classList.remove('active');
+      currentDeviceIndex = (currentDeviceIndex + 1) % currentSlideDevices.length;
+      currentSlideDevices[currentDeviceIndex].classList.add('active');
+    }
 
-      setInterval(slide, intervalTime);
-    });
-  </script>
+    function nextSlide() {
+      slides[currentSlideIndex].classList.remove('active');
+      dots[currentSlideIndex].classList.remove('active');
+      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+      slides[currentSlideIndex].classList.add('active');
+      dots[currentSlideIndex].classList.add('active');
+      currentDeviceIndex = 0;
+      resetDeviceCarousel();
+    }
 
-  <!-- Rolla Carousel Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const rollaScreenshots = [
-        './assets/images/Rolla/screen1.png',
-        './assets/images/Rolla/screen2.png',
-        './assets/images/Rolla/screen3.png',
-        './assets/images/Rolla/screen4.png',
-        './assets/images/Rolla/screen5.png'
-      ];
-      
-      const carouselInner = document.querySelector('.carousel-inner');
-      
-      rollaScreenshots.forEach((img, index) => {
-        const imgElement = document.createElement('img');
-        imgElement.src = img;
-        imgElement.alt = `Rolla app screenshot ${index + 1}`;
-        imgElement.className = 'carousel-img';
-        imgElement.setAttribute('data-index', index);
-        carouselInner.appendChild(imgElement);
+    function previousSlide() {
+      slides[currentSlideIndex].classList.remove('active');
+      dots[currentSlideIndex].classList.remove('active');
+      currentSlideIndex = currentSlideIndex === 0 ? slides.length - 1 : currentSlideIndex - 1;
+      slides[currentSlideIndex].classList.add('active');
+      dots[currentSlideIndex].classList.add('active');
+      currentDeviceIndex = 0;
+      resetDeviceCarousel();
+    }
+
+    function currentSlide(n) {
+      slides[currentSlideIndex].classList.remove('active');
+      dots[currentSlideIndex].classList.remove('active');
+      currentSlideIndex = n - 1;
+      slides[currentSlideIndex].classList.add('active');
+      dots[currentSlideIndex].classList.add('active');
+      currentDeviceIndex = 0;
+      resetDeviceCarousel();
+    }
+
+    function resetDeviceCarousel() {
+      const currentSlideDevices = slides[currentSlideIndex].querySelectorAll('.device-mockup');
+      currentSlideDevices.forEach((device, index) => {
+        device.classList.toggle('active', index === 0);
       });
-      
-      const images = document.querySelectorAll('.carousel-img');
-      let currentIndex = 0;
-      const totalItems = images.length;
-      
-      images[0].classList.add('active');
-      
-      const animations = [
-        'futuristic-zoom',
-        'holographic-flip',
-        'neon-fade',
-        'particle-dissolve'
-      ];
-      
-      function updateCarousel() {
-        const animation = animations[Math.floor(Math.random() * animations.length)];
-        
-        images.forEach(img => {
-          img.classList.remove('active', ...animations);
-        });
-        
-        images[currentIndex].classList.add('active', animation);
-        
-        currentIndex = (currentIndex + 1) % totalItems;
-      }
-      
-      setInterval(updateCarousel, 4000);
-      updateCarousel();
+    }
+
+    setInterval(nextDevice, 2000);
+    setInterval(nextSlide, 8000);
+    document.addEventListener('DOMContentLoaded', function() {
+      resetDeviceCarousel();
     });
   </script>
 
-  <!-- Trainers Carousel Script -->
+  <!-- Transformations and Trainers Carousel Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const carousel = document.querySelector('.trainers-list');
-      let scrollAmount = 0;
-      const scrollStep = carousel.querySelector('.scrollbar-item').offsetWidth;
-      const intervalTime = 3000;
+      const carousels = document.querySelectorAll('.transformations-list, .trainers-list');
+      carousels.forEach(carousel => {
+        let scrollAmount = 0;
+        const scrollStep = carousel.querySelector('.scrollbar-item').offsetWidth;
+        const intervalTime = 3000;
 
-      function slide() {
-        scrollAmount += scrollStep;
-        if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
-          scrollAmount = 0;
+        function slide() {
+          scrollAmount += scrollStep;
+          if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+            scrollAmount = 0;
+          }
+          carousel.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+          });
         }
-        carousel.scrollTo({
-          left: scrollAmount,
-          behavior: 'smooth'
-        });
-      }
 
-      setInterval(slide, intervalTime);
+        setInterval(slide, intervalTime);
+      });
     });
   </script>
 
-  <!-- Contact Form Script -->
+    <!-- Celebration Animation Functions -->
+    <script>
+      function createConfetti() {
+        const container = document.getElementById('celebrationContainer');
+        const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3', '#54a0ff', '#5f27cd'];
+        
+        for (let i = 0; i < 50; i++) {
+          const confetti = document.createElement('div');
+          confetti.className = 'confetti';
+          confetti.style.left = Math.random() * 100 + '%';
+          confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.animationDelay = Math.random() * 2 + 's';
+          confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+          container.appendChild(confetti);
+          
+          setTimeout(() => {
+            confetti.remove();
+          }, 4000);
+        }
+      }
+  
+      function createEmojiParticles() {
+        const container = document.getElementById('celebrationContainer');
+        const emojis = ['🎉', '🎊', '💪', '🏋️', '🎯', '⚡', '🔥', '✨', '🎈', '🥳'];
+        
+        for (let i = 0; i < 20; i++) {
+          const emoji = document.createElement('div');
+          emoji.className = 'emoji-particle';
+          emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+          emoji.style.left = Math.random() * 100 + '%';
+          emoji.style.animationDelay = Math.random() * 1 + 's';
+          container.appendChild(emoji);
+          
+          setTimeout(() => {
+            emoji.remove();
+          }, 4000);
+        }
+      }
+  
+      function createFitnessParticles() {
+        const container = document.getElementById('celebrationContainer');
+        const fitnessIcons = ['💪', '🏋️‍♂️', '🏋️‍♀️', '🏃‍♂️', '🏃‍♀️', '🥇', '🏆', '💯', '🔥', '⚡'];
+        
+        for (let i = 0; i < 15; i++) {
+          const particle = document.createElement('div');
+          particle.className = 'fitness-particle';
+          particle.textContent = fitnessIcons[Math.floor(Math.random() * fitnessIcons.length)];
+          particle.style.left = Math.random() * 100 + '%';
+          particle.style.animationDelay = Math.random() * 1.5 + 's';
+          container.appendChild(particle);
+          
+          setTimeout(() => {
+            particle.remove();
+          }, 3000);
+        }
+      }
+  
+      function createFirework(x, y) {
+        const container = document.getElementById('celebrationContainer');
+        const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57'];
+        
+        for (let i = 0; i < 12; i++) {
+          const particle = document.createElement('div');
+          particle.className = 'firework';
+          particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          particle.style.left = x + 'px';
+          particle.style.top = y + 'px';
+          
+          const angle = (i * 30) * Math.PI / 180;
+          const distance = 100 + Math.random() * 50;
+          const dx = Math.cos(angle) * distance;
+          const dy = Math.sin(angle) * distance;
+          
+          particle.style.setProperty('--dx', dx + 'px');
+          particle.style.setProperty('--dy', dy + 'px');
+          particle.style.animationDelay = Math.random() * 0.2 + 's';
+          
+          container.appendChild(particle);
+          
+          setTimeout(() => {
+            particle.remove();
+          }, 1500);
+        }
+      }
+  
+      function triggerCelebration() {
+        const successMessage = document.getElementById('successMessage');
+        successMessage.classList.add('success-pulse');
+        
+        createConfetti();
+        createEmojiParticles();
+        createFitnessParticles();
+        
+        setTimeout(() => {
+          for (let i = 0; i < 3; i++) {
+            setTimeout(() => {
+              const x = Math.random() * window.innerWidth;
+              const y = Math.random() * window.innerHeight * 0.7;
+              createFirework(x, y);
+            }, i * 500);
+          }
+        }, 500);
+        
+        setTimeout(() => {
+          successMessage.classList.remove('success-pulse');
+        }, 600);
+      }
+    </script>
+
+
+
+
+      <!-- Contact Form Script -->
   <script>
     document.getElementById("contactForm").addEventListener("submit", function(event) {
       event.preventDefault();
 
+      const jsConfetti = new JSConfetti();
       const successMessage = document.getElementById("successMessage");
       successMessage.style.display = "flex";
+      successMessage.classList.add("show");
+
+      // Trigger both celebration animations
+      triggerCelebration();
+      jsConfetti.addConfetti({
+        emojis: ["🎉", "💪", "🏋️"],
+        confettiNumber: 50,
+        confettiRadius: 4,
+        confettiSpeed: 15,
+        confettiColors: ["#ff0a54", "#ff477e", "#ff85a1", "#28a745"]
+      });
 
       setTimeout(() => {
-        successMessage.style.display = "none";
-      }, 3000);
+        successMessage.classList.remove("show");
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 300);
+      }, 2500);
 
       const formData = new FormData(this);
       const data = new URLSearchParams(formData);
 
-      fetch("https://script.google.com/macros/s/AKfycbyxcYo9k2hgVdN7gw0zNPMEX1IlOG6xiuBlqOw3PNjZbWU9DvrRziEQCaOuJYhh_AQq/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbxkCMAaYi2JcgdfNzLOaSGeh0AHXY2jOxZpJwIFMgIDe6MtNuRQ66_4cS_3DchbwQ29/exec", {
         method: "POST",
         body: data,
       })
-      .then(response => response.text())
-      .then(result => console.log("Data saved:", result))
-      .catch(error => console.error("Error saving data:", error.message));
-
-      fetch("https://script.google.com/macros/s/AKfycbxZ-J9BjGIbtK-2JDmnhxIKl4I6qE226J4Q4Zdyb7MyJ6wfY51VPMyqG7h9nsH5NaN1/exec", {
-        method: "POST",
-        body: data,
-      })
-      .then(response => response.text())
-      .then(result => console.log("Email sent:", result))
-      .catch(error => console.error("Error sending email:", error.message));
+        .then(response => response.text())
+        .then(result => {
+          console.log("Form submission result:", result);
+          if (result !== "Success") {
+            alert("Submission failed: " + result);
+          }
+        })
+        .catch(error => {
+          console.error("Error submitting form:", error.message);
+          alert("Error submitting form: " + error.message);
+        });
 
       this.reset();
     });
   </script>
-  <!-- Rolla Carousel Script -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const rollaScreenshots = [
-      './assets/images/Rolla/screen1.png',
-      './assets/images/Rolla/screen2.png',
-      './assets/images/Rolla/screen3.png',
-      './assets/images/Rolla/screen4.png',
-      './assets/images/Rolla/screen5.png'
-    ];
-    
-    const carouselInner = document.querySelector('.carousel-inner');
-    
-    rollaScreenshots.forEach((img, index) => {
-      const imgElement = document.createElement('img');
-      imgElement.src = img;
-      imgElement.alt = `Rolla app screenshot ${index + 1}`;
-      imgElement.className = 'carousel-img';
-      imgElement.setAttribute('data-index', index);
-      carouselInner.appendChild(imgElement);
-    });
-    
-    const images = document.querySelectorAll('.carousel-img');
-    let currentIndex = 0;
-    const totalItems = images.length;
-    
-    images[0].classList.add('active');
-    
-    const animations = [
-      'futuristic-zoom',
-      'holographic-flip',
-      'neon-fade',
-      'particle-dissolve'
-    ];
-    
-    function updateCarousel() {
-      const animation = animations[Math.floor(Math.random() * animations.length)];
-      
-      images.forEach(img => {
-        img.classList.remove('active', ...animations);
-      });
-      
-      images[currentIndex].classList.add('active', animation);
-      
-      currentIndex = (currentIndex + 1) % totalItems;
-    }
-    
-    setInterval(updateCarousel, 4000);
-    updateCarousel();
-  });
-</script>
-
   <!-- Custom JS -->
   <script src="./assets/js/script.js" defer></script>
-
-  <!-- Ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
