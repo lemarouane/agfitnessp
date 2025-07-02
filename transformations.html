@@ -25,9 +25,17 @@
   <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
   <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
   <link rel="preload" as="image" href="./assets/images/calories.svg">
+
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@0.12.0/dist/js-confetti.browser.js"></script>
+
+
+
 </head>
 
 <body id="top">
+  <div class="celebration-container" id="celebrationContainer"></div>
+  
+  
   <!-- Header -->
   <header class="header" data-header>
     <div class="container">
@@ -144,7 +152,7 @@
           '-8Kg', 
           '16 weeks', 
           'Mahir’s journey shows how small steps lead to big changes. He stayed focused, made healthier choices and kept showing up for himself every day. It wasn’t always easy but his hard work paid off. Now, he feels stronger, healthier and more confident than ever!', 
-          './assets/images/Transformations/5.png', 
+          './assets/images/Transformations/Mahir.png', 
           false)">
           <img src="./assets/images/Transformations/Mahir.png" loading="lazy" alt="Transformation 3"
             class="img-transf-cover transformation-img">
@@ -254,7 +262,7 @@
                 <input type="text" name="comment" placeholder="Your Goal!" required class="input-field">
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
-              <div id="successMessage" class="success-message" style="display: none;">
+              <div id="successMessage" class="success-message">
                 <span class="check-icon">✔️</span>
                 <p>Thank you for contacting us!</p>
               </div>
@@ -462,79 +470,115 @@
     });
   </script>
 
-  <!-- Rolla Carousel Script -->
+
+
+  <!-- Celebration Animation Functions -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const rollaScreenshots = [
-        './assets/images/Rolla/screen1.png',
-        './assets/images/Rolla/screen2.png',
-        './assets/images/Rolla/screen3.png',
-        './assets/images/Rolla/screen4.png',
-        './assets/images/Rolla/screen5.png'
-      ];
+    function createConfetti() {
+      const container = document.getElementById('celebrationContainer');
+      const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3', '#54a0ff', '#5f27cd'];
       
-      const carouselInner = document.querySelector('.carousel-inner');
-      
-      rollaScreenshots.forEach((img, index) => {
-        const imgElement = document.createElement('img');
-        imgElement.src = img;
-        imgElement.alt = `Rolla app screenshot ${index + 1}`;
-        imgElement.className = 'carousel-img';
-        imgElement.setAttribute('data-index', index);
-        carouselInner.appendChild(imgElement);
-      });
-      
-      const images = document.querySelectorAll('.carousel-img');
-      let currentIndex = 0;
-      const totalItems = images.length;
-      
-      images[0].classList.add('active');
-      
-      const animations = [
-        'futuristic-zoom',
-        'holographic-flip',
-        'neon-fade',
-        'particle-dissolve'
-      ];
-      
-      function updateCarousel() {
-        const animation = animations[Math.floor(Math.random() * animations.length)];
+      for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDelay = Math.random() * 2 + 's';
+        confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+        container.appendChild(confetti);
         
-        images.forEach(img => {
-          img.classList.remove('active', ...animations);
-        });
-        
-        images[currentIndex].classList.add('active', animation);
-        
-        currentIndex = (currentIndex + 1) % totalItems;
+        setTimeout(() => {
+          confetti.remove();
+        }, 4000);
       }
+    }
+
+    function createEmojiParticles() {
+      const container = document.getElementById('celebrationContainer');
+      const emojis = ['🎉', '🎊', '💪', '🏋️', '🎯', '⚡', '🔥', '✨', '🎈', '🥳'];
       
-      setInterval(updateCarousel, 4000);
-      updateCarousel();
-    });
-  </script>
+      for (let i = 0; i < 20; i++) {
+        const emoji = document.createElement('div');
+        emoji.className = 'emoji-particle';
+        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        emoji.style.left = Math.random() * 100 + '%';
+        emoji.style.animationDelay = Math.random() * 1 + 's';
+        container.appendChild(emoji);
+        
+        setTimeout(() => {
+          emoji.remove();
+        }, 4000);
+      }
+    }
 
-  <!-- Trainers Carousel Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const carousel = document.querySelector('.trainers-list');
-      let scrollAmount = 0;
-      const scrollStep = carousel.querySelector('.scrollbar-item').offsetWidth;
-      const intervalTime = 3000;
+    function createFitnessParticles() {
+      const container = document.getElementById('celebrationContainer');
+      const fitnessIcons = ['💪', '🏋️‍♂️', '🏋️‍♀️', '🏃‍♂️', '🏃‍♀️', '🥇', '🏆', '💯', '🔥', '⚡'];
+      
+      for (let i = 0; i < 15; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'fitness-particle';
+        particle.textContent = fitnessIcons[Math.floor(Math.random() * fitnessIcons.length)];
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 1.5 + 's';
+        container.appendChild(particle);
+        
+        setTimeout(() => {
+          particle.remove();
+        }, 3000);
+      }
+    }
 
-      function slide() {
-        scrollAmount += scrollStep;
-        if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
-          scrollAmount = 0;
+    function createFirework(x, y) {
+      const container = document.getElementById('celebrationContainer');
+      const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57'];
+      
+      for (let i = 0; i < 12; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'firework';
+        particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        particle.style.left = x + 'px';
+        particle.style.top = y + 'px';
+        
+        const angle = (i * 30) * Math.PI / 180;
+        const distance = 100 + Math.random() * 50;
+        const dx = Math.cos(angle) * distance;
+        const dy = Math.sin(angle) * distance;
+        
+        particle.style.setProperty('--dx', dx + 'px');
+        particle.style.setProperty('--dy', dy + 'px');
+        particle.style.animationDelay = Math.random() * 0.2 + 's';
+        
+        container.appendChild(particle);
+        
+        setTimeout(() => {
+          particle.remove();
+        }, 1500);
+      }
+    }
+
+    function triggerCelebration() {
+      const successMessage = document.getElementById('successMessage');
+      successMessage.classList.add('success-pulse');
+      
+      createConfetti();
+      createEmojiParticles();
+      createFitnessParticles();
+      
+      setTimeout(() => {
+        for (let i = 0; i < 3; i++) {
+          setTimeout(() => {
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight * 0.7;
+            createFirework(x, y);
+          }, i * 500);
         }
-        carousel.scrollTo({
-          left: scrollAmount,
-          behavior: 'smooth'
-        });
-      }
-
-      setInterval(slide, intervalTime);
-    });
+      }, 500);
+      
+      setTimeout(() => {
+        successMessage.classList.remove('success-pulse');
+      }, 600);
+    }
   </script>
 
   <!-- Contact Form Script -->
@@ -542,86 +586,50 @@
     document.getElementById("contactForm").addEventListener("submit", function(event) {
       event.preventDefault();
 
+      const jsConfetti = new JSConfetti();
       const successMessage = document.getElementById("successMessage");
       successMessage.style.display = "flex";
+      successMessage.classList.add("show");
+
+      // Trigger both celebration animations
+      triggerCelebration();
+      jsConfetti.addConfetti({
+        emojis: ["🎉", "💪", "🏋️"],
+        confettiNumber: 50,
+        confettiRadius: 4,
+        confettiSpeed: 15,
+        confettiColors: ["#ff0a54", "#ff477e", "#ff85a1", "#28a745"]
+      });
 
       setTimeout(() => {
-        successMessage.style.display = "none";
-      }, 3000);
+        successMessage.classList.remove("show");
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 300);
+      }, 2500);
 
       const formData = new FormData(this);
       const data = new URLSearchParams(formData);
 
-      fetch("https://script.google.com/macros/s/AKfycbyxcYo9k2hgVdN7gw0zNPMEX1IlOG6xiuBlqOw3PNjZbWU9DvrRziEQCaOuJYhh_AQq/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbxkCMAaYi2JcgdfNzLOaSGeh0AHXY2jOxZpJwIFMgIDe6MtNuRQ66_4cS_3DchbwQ29/exec", {
         method: "POST",
         body: data,
       })
-      .then(response => response.text())
-      .then(result => console.log("Data saved:", result))
-      .catch(error => console.error("Error saving data:", error.message));
-
-      fetch("https://script.google.com/macros/s/AKfycbxZ-J9BjGIbtK-2JDmnhxIKl4I6qE226J4Q4Zdyb7MyJ6wfY51VPMyqG7h9nsH5NaN1/exec", {
-        method: "POST",
-        body: data,
-      })
-      .then(response => response.text())
-      .then(result => console.log("Email sent:", result))
-      .catch(error => console.error("Error sending email:", error.message));
+        .then(response => response.text())
+        .then(result => {
+          console.log("Form submission result:", result);
+          if (result !== "Success") {
+            alert("Submission failed: " + result);
+          }
+        })
+        .catch(error => {
+          console.error("Error submitting form:", error.message);
+          alert("Error submitting form: " + error.message);
+        });
 
       this.reset();
     });
-  </script>
-  <!-- Rolla Carousel Script -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const rollaScreenshots = [
-      './assets/images/Rolla/screen1.png',
-      './assets/images/Rolla/screen2.png',
-      './assets/images/Rolla/screen3.png',
-      './assets/images/Rolla/screen4.png',
-      './assets/images/Rolla/screen5.png'
-    ];
-    
-    const carouselInner = document.querySelector('.carousel-inner');
-    
-    rollaScreenshots.forEach((img, index) => {
-      const imgElement = document.createElement('img');
-      imgElement.src = img;
-      imgElement.alt = `Rolla app screenshot ${index + 1}`;
-      imgElement.className = 'carousel-img';
-      imgElement.setAttribute('data-index', index);
-      carouselInner.appendChild(imgElement);
-    });
-    
-    const images = document.querySelectorAll('.carousel-img');
-    let currentIndex = 0;
-    const totalItems = images.length;
-    
-    images[0].classList.add('active');
-    
-    const animations = [
-      'futuristic-zoom',
-      'holographic-flip',
-      'neon-fade',
-      'particle-dissolve'
-    ];
-    
-    function updateCarousel() {
-      const animation = animations[Math.floor(Math.random() * animations.length)];
-      
-      images.forEach(img => {
-        img.classList.remove('active', ...animations);
-      });
-      
-      images[currentIndex].classList.add('active', animation);
-      
-      currentIndex = (currentIndex + 1) % totalItems;
-    }
-    
-    setInterval(updateCarousel, 4000);
-    updateCarousel();
-  });
-</script>
+  </script> 
 
   <!-- Custom JS -->
   <script src="./assets/js/script.js" defer></script>
