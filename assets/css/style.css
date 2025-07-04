@@ -1591,7 +1591,9 @@ body {
 
   .header.active {
     transform: translateY(-100%);
-    background-color: var(--white);
+    background-color: var(--rich-black-fogra-29-1);
+    z-index: 10000;
+
     padding-block: 20px;
     box-shadow: var(--shadow-1);
     animation: slideIn 0.5s ease forwards;
@@ -1626,7 +1628,7 @@ body {
     margin-block-end: 0;
   }
 
-  .header.active .navbar-link { color: var(--rich-black-fogra-29-1); }
+  .header.active .navbar-link { color: var(--white); }
 
   .header .navbar-link:is(:hover, :focus, .active) { color: var(--coquelicot); }
 
