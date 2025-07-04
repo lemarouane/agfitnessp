@@ -319,7 +319,7 @@ body {
 }
 
 .header.active {
-  background-color: var(--white);
+  background-color: var(--rich-black-fogra-29-1);
   box-shadow: var(--shadow-1);
 }
 
@@ -369,7 +369,8 @@ body {
 }
 
 .navbar {
-  background-color: var(--coquelicot);
+  background-color: var(--rich-black-fogra-29-1);
+  background-image: url('../images/classes-bg.png');
   color: var(--white);
   position: fixed;
   top: 100%;
@@ -408,7 +409,7 @@ body {
   transition: var(--transition-1);
 }
 
-.navbar-link:is(:hover, :focus, .active) { color: var(--rich-black-fogra-29-1); }
+.navbar-link:is(:hover, :focus, .active) { color: var(--coquelicot); }
 
 /* Hero Section Styles */
 .hero {
