@@ -1,32 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AG Fitness Dubai | Personal Training, Fitness Transformations & Wellness Programs</title>
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./assets/Logo/logo2.svg" type="image/svg+xml">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.min.css" rel="stylesheet">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&family=Roboto:wght@400;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/js-confetti@0.12.0/dist/js-confetti.browser.js"></script>
-
-  <!-- Preload Images -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
-  <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
-  <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
-  <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
-  <link rel="preload" as="image" href="./assets/images/calories.svg">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG Fitness Dubai | Personal Training, Fitness Transformations & Wellness Programs</title>
+  
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="AG Fitness Dubai offers personalized personal training, fitness transformations, and wellness programs across Dubai. Track your progress with the Rolla app, monitoring calories, steps, heart rate, and more in real-time. Our certified trainers provide one-on-one coaching, online fitness programs, and tailored nutrition plans to help you achieve weight loss, muscle gain, or a healthier lifestyle. From beginners to advanced athletes, our programs include strength training, HIIT, and wellness coaching. Book a free consultation today!">
+    <meta name="keywords" content="AG Fitness Dubai, personal training Dubai, fitness transformations Dubai, wellness programs Dubai, Rolla app fitness tracking, personal trainers Dubai, fitness coaching Dubai, weight loss programs Dubai, muscle gain training, online fitness coaching, one-on-one training Dubai, health and wellness Dubai, personalized workout plans, nutrition guidance Dubai, strength training Dubai, fitness motivation, healthy lifestyle coaching, Dubai gym training, fitness goals Dubai, fat loss programs, body transformation Dubai, fitness for beginners, advanced fitness training, real-time health tracking, Rolla fitness app, Dubai personal trainers, fitness bootcamp Dubai, wellness coaching Dubai, exercise programs Dubai, fitness journey support, certified trainers Dubai, HIIT workouts Dubai, fitness classes Dubai, personal fitness plans, weight management Dubai, fitness accountability, healthy living Dubai">
+    <meta name="author" content="AG Fitness Dubai">
+    <meta name="robots" content="index, follow">
+  
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="AG Fitness Dubai | Personal Training & Fitness Transformations">
+    <meta property="og:description" content="Transform your body and mind with AG Fitness Dubai's personalized training, fitness transformations, and wellness programs. Track progress with the Rolla app and work with expert coaches in Dubai.">
+    <meta property="og:image" content="./assets/images/hero-banner.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AG Fitness Dubai">
+  
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AG Fitness Dubai | Personal Training & Fitness Transformations">
+    <meta name="twitter:description" content="Join AG Fitness Dubai for expert personal training, fitness transformations, and wellness programs. Track your fitness journey with the Rolla app in Dubai.">
+    <meta name="twitter:image" content="./assets/images/hero-banner.png">
+  
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/Logo/logo2.svg" type="image/svg+xml">
+  
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.min.css" rel="stylesheet">
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap" rel="stylesheet">
+  
+    <!-- Preload Images -->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+    <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
+    <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
+    <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
+    <link rel="preload" as="image" href="./assets/images/calories.svg">
+  
+    <!-- JavaScript for Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@0.12.0/dist/js-confetti.browser.js"></script>
+  
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "AG Fitness Dubai Home",
+      "description": "AG Fitness Dubai's homepage offers personalized personal training, fitness transformations, and wellness programs in Dubai. Track progress with the Rolla app and achieve your fitness goals with expert coaches.",
+      "url": "./index.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "AG Fitness Dubai",
+        "logo": "./assets/Logo/lightLogo.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+971585736600",
+          "contactType": "Customer Service",
+          "contactOption": "WhatsApp",
+          "areaServed": "AE",
+          "availableLanguage": "English"
+        },
+        "sameAs": [
+          "https://www.facebook.com/AGFitnessdxb",
+          "https://www.tiktok.com/@agfitnessdxb",
+          "https://www.linkedin.com/company/agfitnessdxb",
+          "https://www.instagram.com/ag_fitness_dxb/"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dubai",
+          "addressCountry": "AE"
+        }
+      }
+    }
+    </script>
+  </head>
 
 <body id="top">
   <div class="celebration-container" id="celebrationContainer"></div>

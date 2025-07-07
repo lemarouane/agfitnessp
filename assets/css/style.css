@@ -9,21 +9,22 @@
 \*-----------------------------------*/
 :root {
   /* Colors */
-  --rich-black-fogra-29_50: hsla(0, 0%, 13%, 0.5);
-  --rich-black-fogra-29-1: hsl(0, 0%, 13%);
-  --rich-black-fogra-29-2: hsl(0, 0%, 8%);
-  --silver-metallic: hsl(212, 9%, 67%);
+  --rich-black-fogra-29_50: hsla(230, 35%, 12%, 0.5);
+  --rich-black-fogra-29-1: hsl(230, 35%, 12%);
+  --rich-black-fogra-29-2: hsl(230, 35%, 8%);
+  --silver-metallic: hsl(220, 20%, 73%);
   --coquelicot_20: hsla(19, 89%, 54%, 0.2);
   --coquelicot_10: hsla(19, 89%, 54%, 0.1);
   --coquelicot: hsl(19, 89%, 54%);
-  --sonic-silver: hsl(0, 0%, 47%);
-  --cadet-gray: hsl(214, 15%, 62%);
-  --light-gray: hsl(0, 0%, 80%);
-  --gainsboro: hsl(0, 0%, 95%);
-  --white_20: hsla(0, 0%, 95%, 0.2);
-  --white_10: hsla(0, 0%, 95%, 0.1);
-  --black_10: hsl(0, 0%, 0%, 0.1);
+  --sonic-silver: hsl(0, 0%, 42%);
+  --cadet-gray: hsl(230, 30%, 68%);
+  --light-gray: hsl(0, 0%, 87%);
+  --gainsboro: hsl(0, 0%, 97%);
+  --white_20: hsla(0, 0%, 97%, 0.2);
+  --white_10: hsla(0, 0%, 97%, 0.1);
+  --black_10: hsla(0, 0%, 0%, 0.1);
   --white: hsl(0, 0%, 100%);
+
 
   /* Typography */
   --ff-catamaran: 'Catamaran', sans-serif;
