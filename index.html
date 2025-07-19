@@ -103,7 +103,7 @@
           <li><a href="index.html" class="navbar-link active" data-nav-link>Home</a></li>
           <li><a href="transformations.html" class="navbar-link" data-nav-link>Transformations</a></li>
           <li><a href="team.html" class="navbar-link" data-nav-link>Our Team</a></li>
-          <li><a href="blog.html" class="navbar-link" data-nav-link>Blog</a></li>
+          <li><a href="#blog" class="navbar-link" data-nav-link>Blog</a></li>
         </ul>
       </nav>
 
@@ -168,88 +168,57 @@
         </div>
       </section>
 
+      <!-- Services Section -->
 
-<!--     <section class="section services" id="services" aria-label="services">
+      <section class="section services" id="services" aria-label="services" style="background-color: var(--rich-black-fogra-29-1); background-image: url('./assets/images/classes-bg.png');">
         <div class="container">
-          <p class="section-subtitle">Our Premium Offerings</p>
-          <h2 class="h2 section-title text-center">Elevate Your Fitness Journey</h2>
-          <div class="services-container">
-              Online Coaching Card 
-            <div class="service-card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000">
-              <div class="card-front">
-                <div class="service-icon">
-                  <ion-icon name="laptop-outline" aria-hidden="true"></ion-icon>
-                  <div class="icon-pulse"></div>
-                </div>
-                <h3 class="service-title">Online Coaching</h3>
-                <p class="service-text">Transform anywhere with tailored plans and real-time tracking via the Rolla app.</p>
-                <a href="contact.html" class="btn btn-primary service-btn">Discover Now</a>
+          <p class="section-subtitle">Our Services</p>
+          <h2 class="h2 section-title text-center" style="color: var(--white); font-size: 7rem;">Your Fitness, Your Way</h2>
+          <p class="section-text text-center" style="color: var(--white); max-width: 600px; margin: 0 auto 3rem;">
+            For over 6 years, AG Physique & Performance has been helping people in Dubai feel stronger, move with ease, and stay motivated for the long run. Fitness isn’t just about how you look—it’s about how you feel, move, and show up every day.
+          </p>
+          <div class="services-grid">
+            <div class="service-card" data-tilt>
+              <div class="card-icon">
+                <ion-icon name="barbell-outline"></ion-icon>
               </div>
-              <div class="card-back">
-                <h4 class="service-title">What You Get</h4>
-                <ul class="service-features">
-                  <li><ion-icon name="checkmark-circle-outline"></ion-icon> Personalized workout plans</li>
-                  <li><ion-icon name="checkmark-circle-outline"></ion-icon> Nutrition guidance with Rolla</li>
-                  <li><ion-icon name="checkmark-circle-outline"></ion-icon> Weekly video check-ins</li>
-                  <li><ion-icon name="checkmark-circle-outline"></ion-icon> 24/7 support via chat</li>
-                </ul>
-                <a href="contact.html" class="btn btn-primary service-btn">Get Started</a>
-              </div>
-              <div class="card-overlay"></div>
+              <h3 class="card-title">In-Person Training</h3>
+              <p class="card-text">
+                Personalized coaching at your home or building’s gym. We bring the equipment and the energy to keep you on track, tailored to your lifestyle and goals.
+              </p>
+              <svg class="card-shape" viewBox="0 0 200 200" preserveAspectRatio="none">
+                <path d="M0,100 C50,150 150,50 200,100 L200,200 L0,200 Z" fill="url(#gradient1)" />
+              </svg>
             </div>
-
-            <div class="service-card" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000">
-              <div class="card-front">
-                <div class="service-icon">
-                  <ion-icon name="barbell-outline" aria-hidden="true"></ion-icon>
-                  <div class="icon-pulse"></div>
-                </div>
-                <h3 class="service-title">One-on-One Training</h3>
-                <p class="service-text">Maximize results with in-person coaching from Dubai’s top fitness experts.</p>
-                <a href="contact.html" class="btn btn-primary service-btn">Discover Now</a>
+            <div class="service-card" data-tilt>
+              <div class="card-icon">
+                <ion-icon name="laptop-outline"></ion-icon>
               </div>
-              <div class="card-back">
-                <h4 class="service-title">What You Get</h4>
-                <ul class="service-features">
-                  <li><ion-icon name="checkmark-circle-outline"></ion-icon> In-person training sessions</li>
-                  <li><ion-icon name="checkmark-circle-outline"></ion-icon> Custom fitness programs</li>
-                  <li><ion-icon name="checkmark-circle-outline"></ion-icon> Real-time form correction</li>
-                  <li><ion-icon name="checkmark-circle-outline"></ion-icon> Goal-specific coaching</li>
-                </ul>
-                <a href="contact.html" class="btn btn-primary service-btn">Get Started</a>
-              </div>
-              <div class="card-overlay"></div>
+              <h3 class="card-title">Online Training</h3>
+              <p class="card-text">
+                Train from anywhere in the world with the same focus and dedication. Our online programs are built around your schedule, mindset, and body.
+              </p>
+              <svg class="card-shape" viewBox="0 0 200 200" preserveAspectRatio="none">
+                <path d="M0,100 C50,50 150,150 200,100 L200,200 L0,200 Z" fill="url(#gradient2)" />
+              </svg>
             </div>
           </div>
+          <svg style="display: none;">
+            <defs>
+              <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color: var(--bittersweet); stop-opacity: 0.8;" />
+                <stop offset="100%" style="stop-color: #ff85a1; stop-opacity: 0.3;" />
+              </linearGradient>
+              <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color: #45b7d1; stop-opacity: 0.8;" />
+                <stop offset="100%" style="stop-color: #96ceb4; stop-opacity: 0.3;" />
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
       </section>
 
-      <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Initialize VanillaTilt for 3D tilt effect
-  VanillaTilt.init(document.querySelectorAll('.service-card'), {
-    max: 15,
-    speed: 400,
-    perspective: 1000,
-    glare: true,
-    'max-glare': 0.2
-  });
 
-  // Parallax effect on scroll
-  window.addEventListener('scroll', function() {
-    const servicesSection = document.querySelector('.services');
-    const rect = servicesSection.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      const scrollPos = window.scrollY;
-      const cards = document.querySelectorAll('.service-card');
-      cards.forEach((card, index) => {
-        const offset = index * 20;
-        card.style.transform = `translateY(${scrollPos * 0.05 - offset}px)`;
-      });
-    }
-  });
-});
-      </script> -->
 
 
 
@@ -258,7 +227,6 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="container">
           <p class="section-subtitle">Our Clients</p>
           <h2 class="h2 section-title text-center" style="color: var(--white);">Clients Transformations</h2>
-
           <ul class="transformations-list has-scrollbar">
             <li class="scrollbar-item">
               <div class="transformation-item" onclick="openModal(
@@ -363,120 +331,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
 
-      <!-- Rolla Partnership Section -->
-      <section class="section rolla-partnership" aria-label="rolla partnership" style="background-color: var(--rich-black-fogra-29-1); background-image: url('./assets/images/classes-bg.png');">
-        <div class="container">
-          <div class="rolla-header">
-            <p class="section-subtitle">Our Partnership</p>
-            <h2 class="h2 section-title text-center" style="color: var(--white);">Track Your Health with Rolla</h2>
-          </div>
-
-          <div class="full-width-carousel-section">
-            <!-- Slide 1 - Rolla World Demo -->
-            <div class="carousel-slide active" style="background-image: url('./assets/images/Rolla/Rolla World - demo - large.png');">
-              <div class="slide-overlay"></div>
-              <img src="./assets/images/Rolla/Logo positive@2x.png" alt="Rolla Logo" class="rolla-logo">
-              <div class="slide-content">
-                <h3>Rolla World Experience</h3>
-                <p>Immerse yourself in a comprehensive health ecosystem where every step, heartbeat, and movement is tracked with precision.</p>
-              </div>
-              <div class="device-carousel">
-                <div class="device-mockup active">
-                  <img src="./assets/images/Rolla/Activities mockup.png" alt="Activities Mockup">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/Diet mockup (1).png" alt="Diet Mockup">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/Health mockup.png" alt="Health Mockup">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/Rolla One - Diet.png" alt="Rolla One Diet">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/Rolla One - Health.png" alt="Rolla One Health">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/rolla one-activities.png" alt="Rolla One Activities">
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 2 - Jogging Activity HUD Route -->
-            <div class="carousel-slide" style="background-image: url('./assets/images/Rolla/Jogging_Activity HUD_Route.png');">
-              <div class="slide-overlay"></div>
-              <img src="./assets/images/Rolla/Logo positive@2x.png" alt="Rolla Logo" class="rolla-logo">
-              <div class="slide-content">
-                <h3>Real-Time Route Tracking</h3>
-                <p>Follow your jogging routes with live GPS tracking, elevation data, and performance metrics displayed on your HUD interface.</p>
-              </div>
-              <div class="device-carousel">
-                <div class="device-mockup active">
-                  <img src="./assets/images/Rolla/Activities mockup.png" alt="Activities Mockup">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/Diet mockup (1).png" alt="Diet Mockup">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/Health mockup.png" alt="Health Mockup">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/Rolla One - Diet.png" alt="Rolla One Diet">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/Rolla One - Health.png" alt="Rolla One Health">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/rolla one-activities.png" alt="Rolla One Activities">
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 3 - Jogging Tutorial -->
-            <div class="carousel-slide" style="background-image: url('./assets/images/Rolla/Jogging Tutorial_1.png');">
-              <div class="slide-overlay"></div>
-              <img src="./assets/images/Rolla/Logo positive@2x.png" alt="Rolla Logo" class="rolla-logo">
-              <div class="slide-content">
-                <h3>Guided Training Sessions</h3>
-                <p>Learn proper techniques with interactive tutorials that adapt to your fitness level and provide real-time feedback.</p>
-              </div>
-              <div class="device-carousel">
-                <div class="device-mockup active">
-                  <img src="./assets/images/Rolla/Activities mockup.png" alt="Activities Mockup">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/Diet mockup (1).png" alt="Diet Mockup">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/Health mockup.png" alt="Health Mockup">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/Rolla One - Diet.png" alt="Rolla One Diet">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/Rolla One - Health.png" alt="Rolla One Health">
-                </div>
-                <div class="device-mockup">
-                  <img src="./assets/images/Rolla/rolla one-activities.png" alt="Rolla One Activities">
-                </div>
-              </div>
-            </div>
-
-            <!-- Carousel Controls -->
-            <div class="carousel-arrows">
-              <button class="carousel-arrow prev" onclick="previousSlide()">‹</button>
-              <button class="carousel-arrow next" onclick="nextSlide()">›</button>
-            </div>
-            <div class="carousel-controls">
-              <div class="carousel-dot active" onclick="currentSlide(1)"></div>
-              <div class="carousel-dot" onclick="currentSlide(2)"></div>
-              <div class="carousel-dot" onclick="currentSlide(3)"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Trainers Section -->
+        <!-- Trainers Section -->
       <section class="section trainers" id="team" aria-label="trainers"
         style="background-color: var(--rich-black-fogra-29-1); background-image: url('./assets/images/classes-bg.png');">
         <div class="container">
@@ -512,36 +367,22 @@ document.addEventListener('DOMContentLoaded', function() {
           <h2 class="h2 section-title text-center" style="color: var(--white);">Let’s Redefine Progress</h2>
           <div class="progress-content">
             <p class="progress-intro" style="color: var(--white);">
-              Progress is often seen as something that only counts at the <em>finish line</em> — when you've hit a <em>goal weight</em>, 
-              carved out abs or caught up to people who've been training for years.
-            </p>
-            <p class="progress-intro" style="color: var(--white);">
-              But with us, progress starts the moment you <em>choose to show up</em> — and it comes in <em>many forms</em>, not just physical ones.
+              Progress starts the moment you choose to show up. It’s not just about the finish line—it’s about the small, meaningful steps along the way.
             </p>
             <div class="word-cloud">
               <div class="word-cloud-row">
-                <span class="word word-1" style="color: var(--white);">Getting out of bed</span>
+                <span class="word word-1" style="color: var(--white);">Getting out of bed with less pain</span>
                 <span class="word-separator">|</span>
-                <span class="word word-2">More Energy</span>
+                <span class="word word-2">Having more energy</span>
                 <span class="word-separator">|</span>
-                <span class="word word-3" style="color: var(--white);">Sleeping through</span>
+                <span class="word word-3" style="color: var(--white);">Sleeping better</span>
               </div>
               <div class="word-cloud-row">
-                <span class="word word-4">Feeling Stronger</span>
+                <span class="word word-4">Feeling stronger day by day</span>
                 <span class="word-separator">|</span>
-                <span class="word word-5" style="color: var(--white);">Saying No</span>
+                <span class="word word-5" style="color: var(--white);">Showing up even on the hard days</span>
                 <span class="word-separator">|</span>
-                <span class="word word-6">Trusting your body</span>
-              </div>
-              <div class="word-cloud-row">
-                <span class="word word-7" style="color: var(--white);">Showing up</span>
-                <span class="word-separator">|</span>
-                <span class="word word-8">Eating without shame</span>
-                <span class="word-separator">|</span>
-                <span class="word word-9" style="color: var(--white);">Feeling your core</span>
-              </div>
-              <div class="word-cloud-row">
-                <span class="word word-10">I feel good</span>
+                <span class="word word-6">Changing food habits</span>
               </div>
             </div>
           </div>
@@ -692,7 +533,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="container">
         <p class="copyright">
           © <script>document.write(new Date().getFullYear());</script> AG Fitness. All Rights Reserved By 
-          <a href="#" target="_blank" class="copyright-link">AG Fitness</a>
+          <a href="https://github.com/lemarouane" target="_blank" class="copyright-link">AG Fitness</a>
         </p>
         <ul class="footer-bottom-list">
           <li><a href="#" class="footer-bottom-link has-before">Privacy Policy</a></li>
@@ -706,10 +547,6 @@ document.addEventListener('DOMContentLoaded', function() {
   <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
     <ion-icon name="caret-up-sharp" aria-hidden="true"></ion-icon>
   </a>
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/971585736600" class="whatsapp-btn" aria-label="Contact us on WhatsApp" target="_blank">
-      <ion-icon name="logo-whatsapp"></ion-icon>
-    </a>
 
   <!-- Scripts -->
   <!-- Ionicons -->
@@ -778,63 +615,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   </script>
 
-  <!-- Rolla Partnership Carousel Script -->
-  <script>
-    let currentSlideIndex = 0;
-    let currentDeviceIndex = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.carousel-dot');
 
-    function nextDevice() {
-      const currentSlideDevices = slides[currentSlideIndex].querySelectorAll('.device-mockup');
-      currentSlideDevices[currentDeviceIndex].classList.remove('active');
-      currentDeviceIndex = (currentDeviceIndex + 1) % currentSlideDevices.length;
-      currentSlideDevices[currentDeviceIndex].classList.add('active');
-    }
-
-    function nextSlide() {
-      slides[currentSlideIndex].classList.remove('active');
-      dots[currentSlideIndex].classList.remove('active');
-      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-      slides[currentSlideIndex].classList.add('active');
-      dots[currentSlideIndex].classList.add('active');
-      currentDeviceIndex = 0;
-      resetDeviceCarousel();
-    }
-
-    function previousSlide() {
-      slides[currentSlideIndex].classList.remove('active');
-      dots[currentSlideIndex].classList.remove('active');
-      currentSlideIndex = currentSlideIndex === 0 ? slides.length - 1 : currentSlideIndex - 1;
-      slides[currentSlideIndex].classList.add('active');
-      dots[currentSlideIndex].classList.add('active');
-      currentDeviceIndex = 0;
-      resetDeviceCarousel();
-    }
-
-    function currentSlide(n) {
-      slides[currentSlideIndex].classList.remove('active');
-      dots[currentSlideIndex].classList.remove('active');
-      currentSlideIndex = n - 1;
-      slides[currentSlideIndex].classList.add('active');
-      dots[currentSlideIndex].classList.add('active');
-      currentDeviceIndex = 0;
-      resetDeviceCarousel();
-    }
-
-    function resetDeviceCarousel() {
-      const currentSlideDevices = slides[currentSlideIndex].querySelectorAll('.device-mockup');
-      currentSlideDevices.forEach((device, index) => {
-        device.classList.toggle('active', index === 0);
-      });
-    }
-
-    setInterval(nextDevice, 2000);
-    setInterval(nextSlide, 8000);
-    document.addEventListener('DOMContentLoaded', function() {
-      resetDeviceCarousel();
-    });
-  </script>
 
   <!-- Transformations and Trainers Carousel Script -->
   <script>
