@@ -103,7 +103,7 @@
           <li><a href="index.html" class="navbar-link active" data-nav-link>Home</a></li>
           <li><a href="transformations.html" class="navbar-link" data-nav-link>Transformations</a></li>
           <li><a href="team.html" class="navbar-link" data-nav-link>Our Team</a></li>
-          <li><a href="#blog" class="navbar-link" data-nav-link>Blog</a></li>
+          <li><a href="blog.html" class="navbar-link" data-nav-link>Blog</a></li>
         </ul>
       </nav>
 
@@ -222,93 +222,171 @@
 
 
 
-      <!-- Transformations Section -->
-      <section class="section transformations" id="transformations" aria-label="transformations" style="background-color: var(--rich-black-fogra-29-1); background-image: url('./assets/images/classes-bg.png');">
-        <div class="container">
-          <p class="section-subtitle">Our Clients</p>
-          <h2 class="h2 section-title text-center" style="color: var(--white);">Clients Transformations</h2>
-          <ul class="transformations-list has-scrollbar">
-            <li class="scrollbar-item">
-              <div class="transformation-item" onclick="openModal(
-                'Meet Sanjin', 
-                'Gain muscle', 
-                '+10kg', 
-                '16 weeks', 
-                'I was always a hard gainer, had my problems with gaining weight, especially muscle weight...', 
-                './assets/images/Transformations/sanjin-testi.mp4', 
-                true)">
-                <img src="./assets/images/Transformations/Sanjin.png" loading="lazy" alt="Transformation 1"
-                  class="img-transf-cover transformation-img">
-              </div>
-            </li>
-            <li class="scrollbar-item">
-              <div class="transformation-item" onclick="openModal(
-                'Meet Ammar', 
-                'Lose weight and build muscle', 
-                '-10Kg', 
-                '15 weeks', 
-                'I was stuck, I gained so much weight, I was always feeling low on energy and I had no motivation to do it on my own.', 
-                './assets/images/Transformations/ammar-testi.mp4', 
-                true)">
-                <img src="./assets/images/Transformations/Ammar.png" loading="lazy" alt="Transformation 2"
-                  class="img-transf-cover transformation-img">
-              </div>
-            </li>
-            <li class="scrollbar-item">
-              <div class="transformation-item" onclick="openModal(
-                'Meet Mahir', 
-                'Lose weight', 
-                '-8Kg', 
-                '16 weeks', 
-                'Mahir’s journey shows how small steps lead to big changes. He stayed focused, made healthier choices and kept showing up for himself every day. It wasn’t always easy but his hard work paid off. Now, he feels stronger, healthier and more confident than ever!', 
-                './assets/images/Transformations/Mahir.png', 
-                false)">
-                <img src="./assets/images/Transformations/Mahir.png" loading="lazy" alt="Transformation 3"
-                  class="img-transf-cover transformation-img">
-              </div>
-            </li>
-            <li class="scrollbar-item">
-              <div class="transformation-item" onclick="openModal(
-                'Meet Deborah', 
-                'Lose weight', 
-                '-14Kg', 
-                '16 weeks', 
-                'If you are like me and you have put on a few extra pounds...', 
-                './assets/images/Transformations/deb-testi.mp4', 
-                true)">
-                <img src="./assets/images/Transformations/Deborah.png" loading="lazy" alt="Transformation 4"
-                  class="img-transf-cover transformation-img">
-              </div>
-            </li>
-            <li class="scrollbar-item">
-              <div class="transformation-item" onclick="openModal(
-                'Meet Omar', 
-                'Lose weight', 
-                '-12Kg', 
-                '12 weeks', 
-                'I was very lucky to end up with AG Fitness..', 
-                './assets/images/Transformations/omar-testi.mp4', 
-                true)">
-                <img src="./assets/images/Transformations/Omar.png" loading="lazy" alt="Transformation 5"
-                  class="img-transf-cover transformation-img">
-              </div>
-            </li>
-            <li class="scrollbar-item">
-              <div class="transformation-item" onclick="openModal(
-                'Meet Adin', 
-                'Lose weight and build muscle', 
-                '-12kg', 
-                '12 weeks', 
-                'I have been really drowsy before, lack of energy. I was not able to sleep so well and I was having mood swings.', 
-                './assets/images/Transformations/adin-testi.mp4', 
-                true)">
-                <img src="./assets/images/Transformations/Adin.png" loading="lazy" alt="Transformation 6"
-                  class="img-transf-cover transformation-img">
-              </div>
-            </li>
-          </ul>
+<!-- Transformations Section -->
+<section class="section transformations" id="transformations" aria-label="transformations" style="background-color: var(--rich-black-fogra-29-1); background-image: url('./assets/images/classes-bg.png');">
+  <div class="container">
+    <p class="section-subtitle">Our Clients</p>
+    <h2 class="h2 section-title text-center" style="color: var(--white);">Clients Transformations</h2>
+    <ul class="transformations-list has-scrollbar">
+      <li class="scrollbar-item">
+        <div class="transformation-item video" onclick="openModal(
+          'Meet Sanjin', 
+          'Gain muscle', 
+          '+10kg', 
+          '16 weeks', 
+          'I was always a hard gainer, had my problems with gaining weight, especially muscle weight...', 
+          './assets/images/Transformations/sanjin-testi.mp4', 
+          true)" 
+          role="button" 
+          tabindex="0" 
+          aria-label="View Sanjin's transformation video">
+          <img src="./assets/images/Transformations/Sanjin.png" loading="lazy" alt="Sanjin's transformation" class="img-transf-cover transformation-img">
+          <div class="transformation-overlay">
+            <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+            <span class="transformation-cta">Watch Transformation</span>
+          </div>
         </div>
-      </section>
+      </li>
+      <li class="scrollbar-item">
+        <div class="transformation-item video" onclick="openModal(
+          'Meet Ammar', 
+          'Lose weight and build muscle', 
+          '-10Kg', 
+          '15 weeks', 
+          'I was stuck, I gained so much weight, I was always feeling low on energy and I had no motivation to do it on my own.', 
+          './assets/images/Transformations/ammar-testi.mp4', 
+          true)" 
+          role="button" 
+          tabindex="0" 
+          aria-label="View Ammar's transformation video">
+          <img src="./assets/images/Transformations/Ammar.png" loading="lazy" alt="Ammar's transformation" class="img-transf-cover transformation-img">
+          <div class="transformation-overlay">
+            <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+            <span class="transformation-cta">Watch Transformation</span>
+          </div>
+        </div>
+      </li>
+      <li class="scrollbar-item">
+        <div class="transformation-item" onclick="openModal(
+          'Meet Mahir', 
+          'Lose weight', 
+          '-8Kg', 
+          '16 weeks', 
+          'Mahir’s journey shows how small steps lead to big changes. He stayed focused, made healthier choices and kept showing up for himself every day. It wasn’t always easy but his hard work paid off. Now, he feels stronger, healthier and more confident than ever!', 
+          './assets/images/Transformations/Mahir.png', 
+          false)" 
+          role="button" 
+          tabindex="0" 
+          aria-label="View Mahir's transformation story">
+          <img src="./assets/images/Transformations/Mahir.png" loading="lazy" alt="Mahir's transformation" class="img-transf-cover transformation-img">
+          <div class="transformation-overlay">
+            <ion-icon name="eye-outline" class="play-icon"></ion-icon>
+            <span class="transformation-cta">See Story</span>
+          </div>
+        </div>
+      </li>
+      <li class="scrollbar-item">
+        <div class="transformation-item video" onclick="openModal(
+          'Meet Deborah', 
+          'Lose weight', 
+          '-14Kg', 
+          '16 weeks', 
+          'If you are like me and you have put on a few extra pounds...', 
+          './assets/images/Transformations/deb-testi.mp4', 
+          true)" 
+          role="button" 
+          tabindex="0" 
+          aria-label="View Deborah's transformation video">
+          <img src="./assets/images/Transformations/Deborah.png" loading="lazy" alt="Deborah's transformation" class="img-transf-cover transformation-img">
+          <div class="transformation-overlay">
+            <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+            <span class="transformation-cta">Watch Transformation</span>
+          </div>
+        </div>
+      </li>
+      <li class="scrollbar-item">
+        <div class="transformation-item video" onclick="openModal(
+          'Meet Omar', 
+          'Lose weight', 
+          '-12Kg', 
+          '12 weeks', 
+          'I was very lucky to end up with AG Fitness..', 
+          './assets/images/Transformations/omar-testi.mp4', 
+          true)" 
+          role="button" 
+          tabindex="0" 
+          aria-label="View Omar's transformation video">
+          <img src="./assets/images/Transformations/Omar.png" loading="lazy" alt="Omar's transformation" class="img-transf-cover transformation-img">
+          <div class="transformation-overlay">
+            <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+            <span class="transformation-cta">Watch Transformation</span>
+          </div>
+        </div>
+      </li>
+      <li class="scrollbar-item">
+        <div class="transformation-item video" onclick="openModal(
+          'Meet Adin', 
+          'Lose weight and build muscle', 
+          '-12kg', 
+          '12 weeks', 
+          'I have been really drowsy before, lack of energy. I was not able to sleep so well and I was having mood swings.', 
+          './assets/images/Transformations/adin-testi.mp4', 
+          true)" 
+          role="button" 
+          tabindex="0" 
+          aria-label="View Adin's transformation video">
+          <img src="./assets/images/Transformations/Adin.png" loading="lazy" alt="Adin's transformation" class="img-transf-cover transformation-img">
+          <div class="transformation-overlay">
+            <ion-icon name="play-circle-outline" class="play-icon"></ion-icon>
+            <span class="transformation-cta">Watch Transformation</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Transformation Modal -->
+<div id="transformationModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <div class="modal-body">
+      <div class="modal-media">
+        <img id="modalImage" alt="Transformation Image" style="display: none;">
+        <video id="modalVideo" controls style="display: none;"></video>
+      </div>
+      <div class="modal-text">
+        <h3 id="modalTitle"></h3>
+        <p><strong>Goal:</strong> <span id="modalGoal"></span></p>
+        <p><strong>Result:</strong> <span id="modalResult"></span></p>
+        <p><strong>Time:</strong> <span id="modalTime"></span></p>
+        <p><strong><span id="modalName"></span> says:</strong></p>
+        <blockquote id="modalQuote"></blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Transformation Modal -->
+<div id="transformationModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <div class="modal-body">
+      <div class="modal-media">
+        <img id="modalImage" alt="Transformation Image" style="display: none;">
+        <video id="modalVideo" controls style="display: none;"></video>
+      </div>
+      <div class="modal-text">
+        <h3 id="modalTitle"></h3>
+        <p><strong>Goal:</strong> <span id="modalGoal"></span></p>
+        <p><strong>Result:</strong> <span id="modalResult"></span></p>
+        <p><strong>Time:</strong> <span id="modalTime"></span></p>
+        <p><strong><span id="modalName"></span> says:</strong></p>
+        <blockquote id="modalQuote"></blockquote>
+      </div>
+    </div>
+  </div>
+</div>
 
       <!-- Transformation Modal -->
       <div id="transformationModal" class="modal">
